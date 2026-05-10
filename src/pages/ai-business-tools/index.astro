@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Best AI Tools for Business in 2026';
+const description = 'AI tools for productivity, automation, analytics, and operations. ChatGPT Enterprise, Claude for Business, Notion AI, Canva AI, and more—reviews based on real business use.';
+
+const tools = [
+  { name: 'ChatGPT Team/Enterprise', maker: 'OpenAI', rating: '4.3', price: '$25-60/user/mo', verdict: 'Best for teams already using ChatGPT' },
+  { name: 'Claude for Business', maker: 'Anthropic', rating: '4.4', price: '$25-50/user/mo', verdict: 'Best for nuanced analysis and long documents' },
+  { name: 'Notion AI', maker: 'Notion', rating: '4.0', price: '$10/mo add-on', verdict: 'Best for Notion-native teams' },
+  { name: 'Canva AI (Magic Studio)', maker: 'Canva', rating: '4.2', price: '$13/mo', verdict: 'Non-designers making decent graphics fast' },
+  { name: 'Zapier AI (Canvas)', maker: 'Zapier', rating: '3.9', price: 'From $20/mo', verdict: 'Workflow automation that thinks, not just links' },
+  { name: 'Microsoft Copilot for Business', maker: 'Microsoft', rating: '4.1', price: '$30/user/mo', verdict: 'Best for Microsoft 365 organizations' }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which AI tool is best for small business owners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canva AI and Notion AI offer the best value for small businesses. Canva's Magic Studio handles marketing visuals without a designer, and Notion AI helps with documentation and planning. Both are affordable and have minimal learning curves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ChatGPT Enterprise or Claude for Business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT Enterprise wins if you need broad integration, plugins, and a proven admin dashboard. Claude for Business edges ahead for teams that work with long documents, legal analysis, or nuanced research—Claude's 200K context window handles documents that ChatGPT truncates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Microsoft Copilot worth it for business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your organization runs on Microsoft 365, Copilot is worth it. It integrates directly into Word, Excel, PowerPoint, Outlook, and Teams. The $30/user/month price stings, but the time savings on email drafting, meeting summaries, and spreadsheet analysis add up quickly."
+      }
+    }
+  ]
+});
+
+const collectionSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": title,
+  "description": description,
+  "url": "https://genaipick.com/ai-business-tools/"
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  structuredData={collectionSchema}
+>
+  <script type="application/ld+json" set:html={faqSchema} />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>AI for Business</h1>
+      <p>Productivity, automation, analytics. AI tools that actually move the needle for business.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Maker</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tools.map(tool => (
+            <tr>
+              <td><strong>{tool.name}</strong></td>
+              <td>{tool.maker}</td>
+              <td>{'⭐'.repeat(Math.round(parseFloat(tool.rating)))} {tool.rating}</td>
+              <td>{tool.price}</td>
+              <td>{tool.verdict}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="articles-section" style="padding-top: 0;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">In-Depth Reviews</h2>
+      <div class="articles-grid">
+        <article class="article-card">
+          <div class="content">
+            <span class="category">AI Business</span>
+            <h3><a href="/blog/best-ai-tools-small-business/">Best AI Tools for Small Business in 2026: What Actually Saves Time</a></h3>
+            <p>I tested 6 AI business tools for 3 weeks on real work. Here's which ones actually saved time and which were just expensive toys.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="content">
+            <span class="category">AI Business</span>
+            <h3><a href="/blog/canva-ai-vs-adobe-firefly/">Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?</a></h3>
+            <p>I needed social media graphics, presentation slides, and a flyer. Both tools claim AI magic. Only one delivered consistently.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

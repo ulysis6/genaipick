@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "GenAIPick privacy policy - how we handle your data.",
+  "url": "https://genaipick.com/privacy/"
+});
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy policy for GenAIPick. Learn how we collect, use, and protect your information."
+  structuredData={structuredData}
+>
+  <div class="static-page">
+    <div class="container">
+      <div class="static-content">
+        <h1>Privacy Policy</h1>
+        
+        <p><strong>Last updated: February 2026</strong></p>
+        
+        <p>At GenAIPick, I take your privacy seriously. This policy explains what information I collect and how I use it.</p>
+        
+        <h2>What I Collect</h2>
+        
+        <h3>Automatic Information</h3>
+        <p>Like most websites, I collect some basic information automatically:</p>
+        <ul>
+          <li>Browser type and version</li>
+          <li>Operating system</li>
+          <li>Pages visited and time spent</li>
+          <li>Referring website addresses</li>
+        </ul>
+        
+        <p>This data is collected through standard web analytics and helps me understand which content is most useful.</p>
+        
+        <h3>Cookies</h3>
+        <p>I use minimal cookies, primarily for:</p>
+        <ul>
+          <li>Website functionality</li>
+          <li>Analytics (anonymized)</li>
+          <li>Optional preferences you set</li>
+        </ul>
+        
+        <h2>Third-Party Services</h2>
+        
+        <h3>Google AdSense</h3>
+        <p>I display ads through Google AdSense. Google may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google's Ads Settings</a>.</p>
+        
+        <h3>Analytics</h3>
+        <p>I may use Cloudflare Web Analytics, which collects anonymized data to help me understand site usage without compromising your privacy.</p>
+        
+        <h2>Affiliate Links</h2>
+        
+        <p>Some links on this site are affiliate links. If you click through and make a purchase, I may earn a small commission at no extra cost to you. This doesn't affect my reviews or recommendations - I only recommend tools I genuinely believe in.</p>
+        
+        <h2>External Links</h2>
+        
+        <p>This site contains links to external websites. Once you leave my site, I'm not responsible for the privacy practices of other sites. Check their privacy policies before sharing any information.</p>
+        
+        <h2>Your Rights</h2>
+        
+        <p>Depending on your location, you may have certain rights regarding your personal data:</p>
+        <ul>
+          <li>Right to access your data</li>
+          <li>Right to delete your data</li>
+          <li>Right to opt out of data collection</li>
+        </ul>
+        
+        <h2>Data Retention</h2>
+        
+        <p>I retain minimal data and only for as long as necessary to operate this website and provide my services.</p>
+        
+        <h2>Children's Privacy</h2>
+        
+        <p>This website is not intended for children under 13 years of age. I do not knowingly collect personal information from children.</p>
+        
+        <h2>Changes to This Policy</h2>
+        
+        <p>I may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+        
+        <h2>Contact</h2>
+        
+        <p>If you have questions about this privacy policy, contact me at: <strong><a href="mailto:hello@genaipick.com">hello@genaipick.com</a></strong></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

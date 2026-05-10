@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Best AI Video & Audio Tools in 2026';
+const description = 'AI tools for video generation, editing, voice synthesis, music, and avatar creation. Runway Gen-4, Kling AI 2.0, Sora, ElevenLabs, and more—tested with real projects.';
+
+const tools = [
+  { name: 'Runway Gen-4', maker: 'Runway', rating: '4.6', price: '$12-36/mo', verdict: 'Best AI video generation overall' },
+  { name: 'Kling AI 2.0', maker: 'Kuaishou', rating: '4.4', price: 'Free / $10/mo', verdict: 'Best free tier, strong motion quality' },
+  { name: 'Sora', maker: 'OpenAI', rating: '4.3', price: '$20/mo (ChatGPT Plus)', verdict: 'Best for ChatGPT-integrated video' },
+  { name: 'Pika 2.0', maker: 'Pika Labs', rating: '4.1', price: '$8/mo', verdict: 'Best for quick video edits and effects' },
+  { name: 'Descript AI', maker: 'Descript', rating: '4.3', price: '$24/mo', verdict: 'Edit video by editing text, best for podcasts' },
+  { name: 'ElevenLabs', maker: 'ElevenLabs', rating: '4.5', price: '$5/mo', verdict: 'Best AI voice synthesis, 32 languages' },
+  { name: 'HeyGen', maker: 'HeyGen', rating: '3.9', price: '$24/mo', verdict: 'Best AI avatar video creation' },
+  { name: 'Suno v4', maker: 'Suno', rating: '4.2', price: '$10/mo', verdict: 'Best AI music generation, full songs' }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best AI tool for video generation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Runway Gen-4 leads for overall quality and creative control. Kling AI 2.0 offers the best free tier with surprisingly strong motion. Sora is the best choice if you already have a ChatGPT Plus subscription. For editing existing video, Descript is unmatched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Sora actually available now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After a long wait, OpenAI released Sora to all ChatGPT Plus ($20/mo) and Pro subscribers. It generates up to 20-second clips with impressive coherence, though Runway Gen-4 still edges it out on motion quality and editing control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best AI voice generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ElevenLabs remains the gold standard for AI voice synthesis in 2026. It supports 32 languages, produces near-indistinguishable-from-human speech, and its voice cloning feature is unmatched. At $5/mo for the starter plan, it is also one of the most affordable tools in this category."
+      }
+    }
+  ]
+});
+
+const collectionSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": title,
+  "description": description,
+  "url": "https://genaipick.com/ai-video-tools/"
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  structuredData={collectionSchema}
+>
+  <script type="application/ld+json" set:html={faqSchema} />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>AI Video & Audio</h1>
+      <p>AI tools for video production, voice synthesis, and audio. Real project testing, not marketing demos.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Maker</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tools.map(tool => (
+            <tr>
+              <td><strong>{tool.name}</strong></td>
+              <td>{tool.maker}</td>
+              <td>{'⭐'.repeat(Math.round(parseFloat(tool.rating)))} {tool.rating}</td>
+              <td>{tool.price}</td>
+              <td>{tool.verdict}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="articles-section" style="padding-top: 0;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">In-Depth Reviews</h2>
+      <div class="articles-grid">
+        <article class="article-card">
+          <div class="content">
+            <span class="category">AI Video & Audio</span>
+            <h3><a href="/blog/best-ai-video-generators/">Best AI Video Generators in 2026: Same Clip, 5 Tools</a></h3>
+            <p>AI video is finally usable. I tested Runway, Sora, Kling, Pika, and HeyGen with the same prompt. The quality gap is real.</p>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="content">
+            <span class="category">AI Video & Audio</span>
+            <h3><a href="/blog/elevenlabs-review/">ElevenLabs Review: The Most Realistic AI Voice I've Ever Heard</a></h3>
+            <p>I used ElevenLabs for a month to narrate presentations, create voice-overs, and clone my own voice. Here's the honest verdict.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

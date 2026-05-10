@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = [
+  {
+    title: 'Best AI Tools for Small Business in 2026: What Actually Saves Time',
+    excerpt: 'I tested 6 AI business tools for 3 weeks on real work. Here\'s which ones actually saved time and which were just expensive toys.',
+    category: 'AI Business',
+    slug: 'best-ai-tools-small-business',
+    date: 'Apr 10, 2026',
+    readTime: '11 min read'
+  },
+  {
+    title: 'Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?',
+    excerpt: 'I needed social media graphics, presentation slides, and a flyer. Both tools claim AI magic. Only one delivered consistently.',
+    category: 'AI Business',
+    slug: 'canva-ai-vs-adobe-firefly',
+    date: 'Apr 8, 2026',
+    readTime: '10 min read'
+  },
+  {
+    title: 'Best AI Video Generators in 2026: Same Clip, 5 Tools',
+    excerpt: 'AI video is finally usable. I tested Runway, Sora, Kling, Pika, and HeyGen with the same prompt. The quality gap is real.',
+    category: 'AI Video & Audio',
+    slug: 'best-ai-video-generators',
+    date: 'Apr 5, 2026',
+    readTime: '10 min read'
+  },
+  {
+    title: 'ElevenLabs Review: The Most Realistic AI Voice I\'ve Ever Heard',
+    excerpt: 'I used ElevenLabs for a month to narrate presentations, create voice-overs, and clone my own voice. Here\'s the honest verdict.',
+    category: 'AI Video & Audio',
+    slug: 'elevenlabs-review',
+    date: 'Apr 2, 2026',
+    readTime: '9 min read'
+  },
+  {
+    title: 'ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?',
+    excerpt: 'I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.',
+    category: 'AI Chat',
+    slug: 'chatgpt-vs-claude-vs-gemini',
+    date: 'Mar 20, 2026',
+    readTime: '9 min read'
+  },
+  {
+    title: 'ChatGPT vs Claude for Content Writing: Which One Actually Helps?',
+    excerpt: 'I spent two weeks using both for daily content work. Here is what surprised me about the differences.',
+    category: 'AI Writing',
+    slug: 'chatgpt-vs-claude-writing',
+    date: 'Feb 15, 2026',
+    readTime: '8 min read'
+  },
+  {
+    title: 'Best AI Image Generators in 2026: I Tested 7 Tools So You Don\'t Have To',
+    excerpt: 'From Midjourney to Flux, I ran the same prompts through seven generators. The results were... interesting.',
+    category: 'AI Image',
+    slug: 'best-ai-image-generators',
+    date: 'Feb 10, 2026',
+    readTime: '12 min read'
+  }
+];
+
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Blog - AI Tool Reviews and Tutorials",
+  "description": "Honest, in-depth reviews and tutorials for AI tools. No sponsored content, just real-world testing.",
+  "url": "https://genaipick.com/blog/"
+});
+---
+
+<BaseLayout
+  title="Blog"
+  description="AI tool reviews, tutorials, and comparisons. Honest testing of the tools that actually matter."
+  structuredData={structuredData}
+>
+  <section class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>In-depth AI tool reviews and tutorials. No fluff, no sponsored content—just real-world testing.</p>
+    </div>
+  </section>
+  
+  <section class="articles-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="articles-grid">
+        {articles.map(article => (
+          <article class="article-card">
+            <div class="content">
+              <span class="category">{article.category}</span>
+              <h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3>
+              <p>{article.excerpt}</p>
+              <div class="meta">
+                <span>{article.date}</span>
+                <span>{article.readTime}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

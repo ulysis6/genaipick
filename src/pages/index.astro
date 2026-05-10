@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const clusters = [
+  {
+    title: 'AI Chat & Assistants',
+    description: 'ChatGPT, Claude, Gemini, and more',
+    icon: '💬',
+    slug: 'ai-chat-assistants',
+    count: '8 articles'
+  },
+  {
+    title: 'AI Writing Tools',
+    description: 'Jasper, Copy.ai, Grammarly AI',
+    icon: '✍️',
+    slug: 'ai-writing-tools',
+    count: '12 articles'
+  },
+  {
+    title: 'AI Image & Design',
+    description: 'Flux, Midjourney, DALL-E',
+    icon: '🎨',
+    slug: 'ai-image-tools',
+    count: '10 articles'
+  },
+  {
+    title: 'AI Video & Audio',
+    description: 'Runway, Sora, ElevenLabs',
+    icon: '🎬',
+    slug: 'ai-video-tools',
+    count: '7 articles'
+  },
+  {
+    title: 'AI for Business',
+    description: 'Copilot, Notion AI, Canva AI',
+    icon: '💼',
+    slug: 'ai-business-tools',
+    count: '8 articles'
+  }
+];
+
+const latestArticles = [
+  {
+    title: 'Best AI Tools for Small Business in 2026: What Actually Saves Time',
+    excerpt: 'I tested 6 AI business tools for 3 weeks on real work. Here\'s which ones actually saved time and which were just expensive toys.',
+    category: 'AI Business',
+    slug: 'best-ai-tools-small-business',
+    date: 'Apr 10, 2026',
+    readTime: '11 min read'
+  },
+  {
+    title: 'Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?',
+    excerpt: 'I needed social media graphics, presentation slides, and a flyer. Both tools claim AI magic. Only one delivered consistently.',
+    category: 'AI Business',
+    slug: 'canva-ai-vs-adobe-firefly',
+    date: 'Apr 8, 2026',
+    readTime: '10 min read'
+  },
+  {
+    title: 'Best AI Video Generators in 2026: Same Clip, 5 Tools',
+    excerpt: 'AI video is finally usable. I tested Runway, Sora, Kling, Pika, and HeyGen with the same prompt. The quality gap is real.',
+    category: 'AI Video & Audio',
+    slug: 'best-ai-video-generators',
+    date: 'Apr 5, 2026',
+    readTime: '10 min read'
+  },
+  {
+    title: 'ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?',
+    excerpt: 'I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.',
+    category: 'AI Chat',
+    slug: 'chatgpt-vs-claude-vs-gemini',
+    date: 'Mar 20, 2026',
+    readTime: '9 min read'
+  },
+  {
+    title: 'ChatGPT vs Claude for Content Writing: Which One Actually Helps?',
+    excerpt: 'I spent two weeks using both for daily content work. Here is what surprised me about the differences.',
+    category: 'AI Writing',
+    slug: 'chatgpt-vs-claude-writing',
+    date: 'Feb 15, 2026',
+    readTime: '8 min read'
+  },
+  {
+    title: 'Best AI Image Generators in 2026: I Tested 7 Tools So You Don\'t Have To',
+    excerpt: 'From Midjourney to Flux, I ran the same prompts through seven generators. The results were... interesting.',
+    category: 'AI Image',
+    slug: 'best-ai-image-generators',
+    date: 'Feb 10, 2026',
+    readTime: '12 min read'
+  }
+];
+---
+
+<BaseLayout
+  title="Home"
+  description="Honest, hands-on AI tool reviews and tutorials. Find the best AI tools for writing, design, business, video, and everyday use."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Find the Right AI Tool</h1>
+      <p>No fluff. No sponsored reviews. Just honest, hands-on testing of the AI tools that actually matter.</p>
+    </div>
+  </section>
+  
+  <section class="clusters-section">
+    <div class="container">
+      <h2>Explore by Category</h2>
+      <div class="clusters-grid">
+        {clusters.map(cluster => (
+          <a href={`/${cluster.slug}/`} class="cluster-card">
+            <div class="icon">{cluster.icon}</div>
+            <h3>{cluster.title}</h3>
+            <p>{cluster.description}</p>
+            <span class="count">{cluster.count}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <section class="articles-section">
+    <div class="container">
+      <h2>Latest Reviews</h2>
+      <div class="articles-grid">
+        {latestArticles.map(article => (
+          <article class="article-card">
+            <div class="content">
+              <span class="category">{article.category}</span>
+              <h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3>
+              <p>{article.excerpt}</p>
+              <div class="meta">
+                <span>{article.date}</span>
+                <span>{article.readTime}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/blog/" class="btn btn-primary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

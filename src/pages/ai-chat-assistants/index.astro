@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Best AI Chat & Assistants in 2026';
+const description = 'Honest reviews of AI chatbots and assistants for everyday use. ChatGPT, Claude, Gemini, Perplexity, Copilot, DeepSeek—tested with real questions, not marketing demos.';
+
+const articles = [
+  {
+    title: 'ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?',
+    excerpt: 'I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.',
+    slug: 'chatgpt-vs-claude-vs-gemini',
+    date: 'Mar 20, 2026',
+    readTime: '9 min read'
+  }
+];
+
+const tools = [
+  { name: 'ChatGPT (GPT-4o/5)', maker: 'OpenAI', rating: '4.4', price: 'Free / $20/mo', verdict: 'Most popular, easiest to start with' },
+  { name: 'Claude (Sonnet 4/Opus)', maker: 'Anthropic', rating: '4.6', price: 'Free / $20/mo', verdict: 'Best for long text and deep analysis' },
+  { name: 'Gemini', maker: 'Google', rating: '4.2', price: 'Free / $20/mo', verdict: 'Best tied into Google Workspace' },
+  { name: 'Microsoft Copilot', maker: 'Microsoft', rating: '4.0', price: 'Free / $30/mo', verdict: 'Best built into Windows and Office' },
+  { name: 'Perplexity', maker: 'Perplexity AI', rating: '4.3', price: 'Free / $20/mo', verdict: 'Best AI search engine for research' },
+  { name: 'DeepSeek', maker: 'DeepSeek', rating: '4.1', price: 'Free', verdict: 'Best free AI with strong reasoning' }
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which AI chatbot is best for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT is the easiest AI assistant to start with. The interface is simple, it handles almost any type of question, and the free tier is generous enough for casual use. If you already use Google products, Gemini is also very approachable since it works inside Gmail, Docs, and Search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Claude better than ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what you need. Claude produces more nuanced, detailed responses and handles long documents better (200K token context). ChatGPT is more versatile with plugins, image generation, and a larger ecosystem. For writing and analysis, Claude often wins. For general-purpose use, ChatGPT has the edge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best free AI assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DeepSeek offers the strongest completely free experience with no usage limits. ChatGPT's free tier is also generous with GPT-4o access. Gemini Free gives you access to Google's best model at no cost. All three are excellent starting points if you do not want to pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI is best for research and finding information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perplexity is the best AI for research because it searches the web in real-time and cites its sources. Claude is better for analyzing and summarizing documents you already have. For quick factual questions, any of the major chatbots work well, but Perplexity's source citations make it the most trustworthy."
+      }
+    }
+  ]
+});
+
+const collectionSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": title,
+  "description": description,
+  "url": "https://genaipick.com/ai-chat-assistants/"
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  structuredData={collectionSchema}
+>
+  <script type="application/ld+json" set:html={faqSchema} />
+
+  <section class="page-header">
+    <div class="container">
+      <h1>AI Chat & Assistants</h1>
+      <p>AI chatbots tested with real questions. No marketing fluff—just honest answers about which one actually helps.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Maker</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tools.map(tool => (
+            <tr>
+              <td><strong>{tool.name}</strong></td>
+              <td>{tool.maker}</td>
+              <td>{'⭐'.repeat(Math.round(parseFloat(tool.rating)))} {tool.rating}</td>
+              <td>{tool.price}</td>
+              <td>{tool.verdict}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="articles-section" style="padding-top: 0;">
+    <div class="container">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 20px;">In-Depth Reviews</h2>
+      <div class="articles-grid">
+        {articles.map(article => (
+          <article class="article-card">
+            <div class="content">
+              <span class="category">AI Chat</span>
+              <h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3>
+              <p>{article.excerpt}</p>
+              <div class="meta">
+                <span>{article.date}</span>
+                <span>{article.readTime}</span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p style="margin-top: 24px; color: var(--text-secondary); font-size: 14px;">More chat assistant reviews coming soon. Perplexity vs ChatGPT deep-dive is next.</p>
+    </div>
+  </section>
+</BaseLayout>
