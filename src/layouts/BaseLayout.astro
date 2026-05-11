@@ -53,6 +53,8 @@ const websiteSchema = JSON.stringify({
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
     <meta name="theme-color" content="#0ea5e9" />
     
     <title>{fullTitle}</title>
@@ -505,6 +507,12 @@ const websiteSchema = JSON.stringify({
         max-width: 100%;
         margin: 0 auto;
       }
+      .article-h1 {
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 24px;
+        line-height: 1.3;
+      }
       .article-content h2 {
         font-size: 26px;
         font-weight: 700;
@@ -781,6 +789,13 @@ const websiteSchema = JSON.stringify({
             <h4>Legal</h4>
             <a href="/privacy/">Privacy Policy</a>
             <a href="/terms/">Terms of Service</a>
+          </div>
+          <div class="footer-col">
+            <h4>Free Tools</h4>
+            <a href="https://toolmixr.com/" target="_blank" rel="noopener">ToolMixr</a>
+            <a href="https://toolmixr.com/mortgage-calculator" target="_blank" rel="noopener">Mortgage Calculator</a>
+            <a href="https://toolmixr.com/json-formatter" target="_blank" rel="noopener">JSON Formatter</a>
+            <a href="https://toolmixr.com/password-generator" target="_blank" rel="noopener">Password Generator</a>
           </div>
         </div>
         <div class="footer-bottom">
