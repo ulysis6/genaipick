@@ -23,6 +23,31 @@ const articleSchema = JSON.stringify({
   "url": "https://genaipick.com/blog/chatgpt-vs-claude-vs-gemini/"
 });
 
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://genaipick.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?",
+      "item": "https://genaipick.com/blog/chatgpt-vs-claude-vs-gemini/"
+    }
+  ]
+});
+
 const products = [
   { name: "ChatGPT", brand: "OpenAI", rating: "4.4", price: "0" },
   { name: "Claude", brand: "Anthropic", rating: "4.6", price: "0" },
@@ -102,7 +127,9 @@ const relatedArticles = [
   articlePublishedTime="2026-03-20"
   articleAuthor="GenAIPick Editorial"
   structuredData={articleSchema}
+  ogImage="/og-chatgpt-vs-claude-vs-gemini.svg"
 >
+  <script type="application/ld+json" set:html={breadcrumbSchema} />
   <script type="application/ld+json" set:html={productSchemas} />
   <script type="application/ld+json" set:html={faqSchema} />
   

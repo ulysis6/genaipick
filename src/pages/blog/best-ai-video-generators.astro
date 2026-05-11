@@ -23,6 +23,31 @@ const articleSchema = JSON.stringify({
   "url": "https://genaipick.com/blog/best-ai-video-generators/"
 });
 
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://genaipick.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Best AI Video Generators in 2026: I Made the Same 60-Second Clip in 5 Tools",
+      "item": "https://genaipick.com/blog/best-ai-video-generators/"
+    }
+  ]
+});
+
 const products = [
   { name: "Runway Gen-4", brand: "Runway", rating: "4.6", price: "12", description: "Professional AI video generation with the most creative control" },
   { name: "Sora", brand: "OpenAI", rating: "4.3", price: "20", description: "OpenAI's AI video generator included with ChatGPT Plus" },
@@ -103,7 +128,9 @@ const relatedArticles = [
   articlePublishedTime="2026-04-05"
   articleAuthor="GenAIPick Editorial"
   structuredData={articleSchema}
+  ogImage="/og-best-ai-video-generators.svg"
 >
+  <script type="application/ld+json" set:html={breadcrumbSchema} />
   <script type="application/ld+json" set:html={productSchemas} />
   <script type="application/ld+json" set:html={faqSchema} />
   

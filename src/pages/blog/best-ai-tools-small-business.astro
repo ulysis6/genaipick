@@ -23,6 +23,31 @@ const articleSchema = JSON.stringify({
   "url": "https://genaipick.com/blog/best-ai-tools-small-business/"
 });
 
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://genaipick.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Best AI Tools for Small Business in 2026: What Actually Saves Time",
+      "item": "https://genaipick.com/blog/best-ai-tools-small-business/"
+    }
+  ]
+});
+
 const products = [
   { name: "Canva AI", brand: "Canva", rating: "4.3", price: "13", description: "AI-powered design tool for non-designers" },
   { name: "Notion AI", brand: "Notion", rating: "3.8", price: "10", description: "AI writing and organization inside Notion workspace" },
@@ -104,7 +129,9 @@ const relatedArticles = [
   articlePublishedTime="2026-04-10"
   articleAuthor="GenAIPick Editorial"
   structuredData={articleSchema}
+  ogImage="/og-best-ai-tools-small-business.svg"
 >
+  <script type="application/ld+json" set:html={breadcrumbSchema} />
   <script type="application/ld+json" set:html={productSchemas} />
   <script type="application/ld+json" set:html={faqSchema} />
   

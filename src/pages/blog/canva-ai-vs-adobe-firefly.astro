@@ -23,6 +23,31 @@ const articleSchema = JSON.stringify({
   "url": "https://genaipick.com/blog/canva-ai-vs-adobe-firefly/"
 });
 
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://genaipick.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Canva AI vs Adobe Firefly: Which One Makes Better Marketing Graphics?",
+      "item": "https://genaipick.com/blog/canva-ai-vs-adobe-firefly/"
+    }
+  ]
+});
+
 const products = [
   { name: "Canva AI", brand: "Canva", rating: "4.3", price: "13", description: "AI-powered design platform with Magic Studio for non-designers" },
   { name: "Adobe Firefly", brand: "Adobe", rating: "4.0", price: "5", description: "Adobe's AI image generator trained on licensed content, integrated into Creative Cloud" }
@@ -100,7 +125,9 @@ const relatedArticles = [
   articlePublishedTime="2026-04-08"
   articleAuthor="GenAIPick Editorial"
   structuredData={articleSchema}
+  ogImage="/og-canva-ai-vs-adobe-firefly.svg"
 >
+  <script type="application/ld+json" set:html={breadcrumbSchema} />
   <script type="application/ld+json" set:html={productSchemas} />
   <script type="application/ld+json" set:html={faqSchema} />
   

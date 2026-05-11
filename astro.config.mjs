@@ -7,5 +7,9 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'auto',
   },
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    lastmod: new Date(),
+    changefreq: 'weekly',
+    priority: 0.7,
+  })],
 });
