@@ -562,6 +562,19 @@ const websiteSchema = JSON.stringify({
       }
       [data-theme="dark"] .article-content pre { background: #020617; }
       
+      .article-content img {
+        height: auto;
+        max-width: 680px;
+        width: 100%;
+        display: block;
+        margin: 24px auto;
+        border-radius: 8px;
+      }
+      [data-theme="dark"] .article-content img {
+
+        box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      }
+      
       /* Comparison Table */
       .comparison-table {
         width: 100%;
