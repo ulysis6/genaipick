@@ -59,15 +59,9 @@ const websiteSchema = JSON.stringify({
     
     <title>{fullTitle}</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRXP4JLYZZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PRXP4JLYZZ');
-    </script>
+    <!-- Google Analytics (GA4) fix -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=你的ID"></script>
+    <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PRXP4JLYZZ')`} />
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2784023346294382" crossorigin="anonymous"></script>
