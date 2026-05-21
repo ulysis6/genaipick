@@ -4,19 +4,19 @@
 
 ## AI Chat & Assistants
 
-- ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use? — /blog/chatgpt-vs-claude-vs-gemini/ — I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.
 - What AI Tools Do Beginners Actually Need? I Tested 8 So You Don't Have To — /blog/essential-ai-tools-for-beginners/ — I paid for 8 AI tools and tested each one for days on real tasks. Here's which ones actually help beginners—and which ones are just hype.
+- ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use? — /blog/chatgpt-vs-claude-vs-gemini/ — I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.
 
 ## AI Writing Tools
 
-- Free AI Writing Tools That Don't Suck in 2026 — /blog/free-ai-writing-tools/ — I tested 7 free AI writing tools for two weeks on real work. Here's which ones are genuinely useful—and which waste your time.
+- Free AI Writing Tools That Don't Suck in 2026 — /blog/free-ai-writing-tools/ — I tested 6 free AI writing tools for two weeks on real work. Here's which ones actually produce usable content—and which free tiers are bait-and-switch traps.
 - How to Use Jasper AI for Blog Posts (Step-by-Step Tutorial) — /blog/jasper-ai-blog-tutorial/ — I paid $59/month for Jasper AI Pro and wrote 12 blog posts over 4 weeks. Here is the step-by-step process that actually works.
 - ChatGPT vs Claude for Content Writing: Which One Actually Helps? — /blog/chatgpt-vs-claude-writing/ — I spent two weeks using both for daily content work. Here is what surprised me about the differences.
 
 ## AI Image & Design
 
+- Midjourney vs GPT Image vs Stable Diffusion: Which Makes Better Images? — /blog/midjourney-vs-dalle-vs-stable-diffusion/ — DALL-E 3 is gone. GPT Image 2 replaced it. I tested the new top three AI image generators with the same prompts.
 - Best AI Image Generators in 2026: I Tested 7 Tools So You Don't Have To — /blog/best-ai-image-generators/ — From Midjourney to Flux, I ran the same prompts through seven generators. The results were... interesting.
-- Midjourney vs GPT Image vs Stable Diffusion: Which Makes Better Images in 2026? — /blog/midjourney-vs-dalle-vs-stable-diffusion/ — I ran the same prompts through Midjourney V7, OpenAI's GPT Image 2, and Stable Diffusion 3.5. One tool won on aesthetics, one on accuracy, and one on control.
 
 ## AI Video & Audio
 
@@ -25,6 +25,7 @@
 
 ## AI for Business
 
+- How to Automate Customer Support with AI Chatbots (I Tested 5 So You Don't Have To) — /blog/ai-chatbot-customer-support/ — I spent 3 weeks testing AI chatbot tools on real customer support tickets. Here's which ones actually resolved issues and which ones just annoyed my customers.
 - Best AI Tools for Small Business in 2026: What Actually Saves Time — /blog/best-ai-tools-small-business/ — I tested 6 AI business tools for 3 weeks on real work. Here's which ones actually saved time and which were just expensive toys.
 - Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics? — /blog/canva-ai-vs-adobe-firefly/ — I needed social media graphics, presentation slides, and a flyer. Both tools claim AI magic. Only one delivered consistently.
 
