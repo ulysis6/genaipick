@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lu Shen",
+  "alternateName": "路申",
+  "url": "https://genaipick.com/author/",
+  "sameAs": [
+    "https://www.linkedin.com/in/shenlu-ulysis6/",
+    "https://github.com/ulysis6",
+    "https://toolmixr.com/author"
+  ],
+  "description": "Small business owner and AI tools enthusiast sharing honest reviews and tutorials at GenAIPick.com.",
+  "knowsAbout": ["AI Tools", "AI Chat Assistants", "AI Writing Tools", "AI Image Generation", "AI Video Generation", "AI Coding Tools", "Prompt Engineering", "Tech Reviews"]
+});
+---
+
+<BaseLayout title="Author — Lu Shen" description="Lu Shen writes honest, hands-on AI tool reviews and tutorials at GenAIPick. Small business owner and AI enthusiast." structuredData={structuredData}>
+  <div class="static-page"><div class="container"><div class="static-content">
+    <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;margin-bottom:40px;">
+      <div style="width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#10b981);display:flex;align-items:center;justify-content:center;font-size:40px;flex-shrink:0;">✍️</div>
+      <div style="flex:1;min-width:250px;">
+        <h1>Lu Shen</h1>
+        <p style="font-size:16px;color:var(--primary);font-weight:600;margin-bottom:16px;">Small Business Owner · AI Tools Enthusiast · Reviewer at GenAIPick</p>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">I write honest, hands-on AI tool reviews and tutorials at GenAIPick. I also build free online tools at <a href="https://toolmixr.com" target="_blank" rel="noopener">ToolMixr</a>. I pay for my own subscriptions, test tools for weeks before reviewing them, and tell you when something genuinely impresses me — or when it is just hype.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener" class="btn btn-secondary">🔗 LinkedIn</a>
+          <a href="https://github.com/ulysis6" target="_blank" rel="noopener" class="btn btn-secondary">🔗 GitHub</a>
+          <a href="https://toolmixr.com" target="_blank" rel="noopener" class="btn btn-secondary">🔗 ToolMixr</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Why I Started GenAIPick</h2>
+    <p>Most AI tool reviews are either sponsored content disguised as reviews, listicles that barely scratch the surface, or written by people who have clearly not used the tools. I wanted something different: real usage, real opinions, no fluff.</p>
+
+    <h2>My Testing Methodology</h2>
+    <ul>
+      <li><strong>Minimum 2 weeks of real usage</strong> — not playing with demos, actual production work</li>
+      <li><strong>Same prompts across competitors</strong> — fair, head-to-head comparisons</li>
+      <li><strong>Time tracking</strong> — measuring actual productivity impact</li>
+      <li><strong>Quality scoring</strong> — rating outputs against specific criteria</li>
+      <li><strong>No free access for reviews</strong> — I pay for my own subscriptions</li>
+    </ul>
+
+    <h2>What I Cover</h2>
+    <p>AI chat assistants (ChatGPT, Claude, Gemini), AI writing tools (Jasper, Grammarly), AI image generators (Midjourney, DALL-E, Flux), AI video tools (Sora, Runway, Pika), AI coding assistants (Copilot, Cursor, Windsurf), and AI business tools.</p>
+
+    <h2>My Tools &amp; Tech Stack</h2>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Astro.js</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Cloudflare Pages</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">ChatGPT</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Claude</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">GitHub Copilot</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Perplexity</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Midjourney</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Canva</span>
+      <span style="background:rgba(14,165,233,0.1);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--text-secondary);">Notion</span>
+    </div>
+
+    <h2>Get in Touch</h2>
+    <p>Found something outdated? Want me to review a tool? Just want to say hi? <a href="/contact/">Drop me a message</a> or connect on <a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </div></div></div>
+</BaseLayout>
