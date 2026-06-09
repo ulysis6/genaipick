@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+var title = "AI Prompt Engineering Guide 2026: Techniques That Actually Work";
+var description = "A practical guide to prompt engineering - from basic techniques to advanced strategies for ChatGPT, Claude, and Gemini.";
+var articleSchema = JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":title,"description":description,"author":{"@type":"Person","name":"Lu Shen"},"publisher":{"@type":"Organization","name":"GenAIPick","url":"https://genaipick.com"},"datePublished":"2026-06-07","dateModified":"2026-06-07","url":"https://genaipick.com/blog/ai-prompt-engineering-guide-2026/"});
+var breadcrumbSchema = JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://genaipick.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://genaipick.com/blog/"},{"@type":"ListItem","position":3,"name":title,"item":"https://genaipick.com/blog/ai-prompt-engineering-guide-2026/"}]});
+var faqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Most important prompt technique?","acceptedAnswer":{"@type":"Answer","text":"Be specific. Instead of 'write a blog post about AI,' try 'write a 500-word blog post about AI in healthcare including 3 real examples from 2025-2026.' Specificity beats any template."}},{"@type":"Question","name":"Does prompt engineering work across all models?","acceptedAnswer":{"@type":"Answer","text":"Core principles apply across models. Claude works with XML structure. GPT works with role-based prompts. Gemini needs explicit formatting."}},{"@type":"Question","name":"Is prompt engineering still relevant?","acceptedAnswer":{"@type":"Answer","text":"Yes but shifting. Basic tricks matter less. Advanced techniques like chain-of-thought and structured output still significantly improve complex task results."}}]});
+var relatedArticles = [{ title: "ChatGPT vs Claude vs Gemini", slug: "chatgpt-vs-claude-vs-gemini" },{ title: "Free AI Writing Tools", slug: "free-ai-writing-tools" }];
+---
+<BaseLayout title={title} description={description} structuredData={articleSchema + breadcrumbSchema + faqSchema}>
+<div class="article-page"><div class="container"><nav class="breadcrumb"><a href="/">Home</a> <span class="breadcrumb-sep">&#8250;</span> <a href="/blog/">Blog</a> <span class="breadcrumb-sep">&#8250;</span> <span>Prompt Engineering Guide</span></nav><div class="article-content">
+<h1 class="article-h1">AI Prompt Engineering Guide 2026</h1>
+<!-- SCREENSHOT: Good vs bad prompt example -->
+<h2>Prompt Engineering Is Not Magic</h2><p>Forget the "secret prompt" hype. Prompt engineering is clear communication - telling AI exactly what you want, in what format, with what constraints.</p>
+<h2>Core Techniques (Ranked by Impact)</h2>
+<h3>1. Be Specific</h3><p>Replace vague requests with detailed specifications: recipient, tone, key points, outcome, length.</p>
+<h3>2. Define Output Format</h3><p>Tell the AI the structure: bullet points, JSON, markdown table, or prose.</p>
+<h3>3. Role-Based Prompting</h3><p>Assign a role: "You are an experienced financial analyst reviewing a startup pitch deck."</p>
+<h3>4. Chain-of-Thought</h3><p>Add "Think step by step" for reasoning tasks. Models perform better when they show their work.</p>
+<h3>5. Few-Shot Prompting</h3><p>Provide 2-3 examples of desired output. Most reliable way to control style and format.</p>
+<h2>Model-Specific Tips</h2>
+<table class="comparison-table"><thead><tr><th>Model</th><th>Best Technique</th></tr></thead><tbody><tr><td>ChatGPT (GPT-5)</td><td>Role-based + structured output</td></tr><tr><td>Claude Sonnet 4</td><td>XML-structured prompts</td></tr><tr><td>Gemini 3.5</td><td>Step-by-step instructions</td></tr></tbody></table>
+<section class="faq" style="margin-top:40px;"><h2>FAQ</h2>
+<div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Most important technique?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Be specific - detailed prompts beat any secret template.</p></div></div>
+<div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Works across models?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Core principles apply. Each model has nuances.</p></div></div>
+<div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Still relevant?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Yes - advanced techniques still significantly improve complex task results.</p></div></div>
+</section>
+<section class="related-articles" style="margin-top:40px;"><h2>Related</h2><div class="articles-grid">{relatedArticles.map(a => (<article class="article-card"><div class="content"><h3><a href={'/blog/'+a.slug+'/'}>{a.title}</a></h3></div></article>))}</div></section>
+</div></div></div></BaseLayout>

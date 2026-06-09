@@ -2,158 +2,48 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = [
-  {
-    title: "Free AI Image Generators That Actually Work in 2026",
-    excerpt: "I tested 7 free AI image generators with the same prompts. Stable Diffusion 3, Flux Schnell, Ideogram, Recraft, Leonardo, Microsoft Designer, and Playground AI. Here's what actually works.",
-    category: 'AI Image',
-    slug: 'free-ai-image-generators',
-    date: 'June 7, 2026',
-    readTime: '12 min read'
-  },
-  {
-    title: "AI Music Generators Compared: Suno vs Udio vs Stable Audio vs Riffusion",
-    excerpt: "I ran the same prompt through Suno v4, Udio v1.5, Stable Audio 2.0, and Riffusion. Same song, four different outputs. Here's which one is actually worth your time.",
-    category: 'AI Video & Audio',
-    slug: 'ai-music-generators-compared',
-    date: 'June 7, 2026',
-    readTime: '14 min read'
-  },
-  {
-    title: "I Tested Gemini 3.5 Flash for 24 Hours: The Good, The Bad, The Pricing Trap",
-    excerpt: "Google says Gemini 3.5 Flash beats its own flagship model. I tested it on real coding, writing, and reasoning tasks. Here is what the benchmarks do not tell you.",
-    category: 'AI Chat',
-    slug: 'gemini-3-5-flash-review',
-    date: 'June 7, 2026',
-    readTime: '14 min read'
-  },
-  {
-    title: "Free AI Writing Tools That Don't Suck in 2026",
-    excerpt: "I tested 7 free AI writing tools for two weeks on real work. Here's which ones are genuinely useful—and which waste your time.",
-    category: 'AI Writing',
-    slug: 'free-ai-writing-tools',
-    date: 'May 19, 2026',
-    readTime: '11 min read'
-  },
-  {
-    title: "What AI Tools Do Beginners Actually Need? I Tested 8 So You Don't Have To",
-    excerpt: "I paid for 8 AI tools and tested each one for days on real tasks. Here's which ones actually help beginners—and which ones are just hype.",
-    category: 'AI Chat',
-    slug: 'essential-ai-tools-for-beginners',
-    date: 'May 16, 2026',
-    readTime: '13 min read'
-  },
-  {
-    title: 'Midjourney vs GPT Image vs Stable Diffusion: Which Makes Better Images in 2026?',
-    excerpt: "I ran the same prompts through Midjourney V7, OpenAI's GPT Image 2, and Stable Diffusion 3.5. One tool won on aesthetics, one on accuracy, and one on control.",
-    category: 'AI Image',
-    slug: 'midjourney-vs-dalle-vs-stable-diffusion',
-    date: 'May 14, 2026',
-    readTime: '11 min read'
-  },
-  {
-    title: 'How to Use Jasper AI for Blog Posts (Step-by-Step Tutorial)',
-    excerpt: 'I paid $69/month for Jasper and used it for 6 weeks on real blog posts. Here is my honest walkthrough, from Brand Voice setup to publishing.',
-    category: 'AI Writing',
-    slug: 'jasper-ai-blog-tutorial',
-    date: 'Apr 28, 2026',
-    readTime: '10 min read'
-  },
-  {
-    title: 'Best AI Tools for Small Business in 2026: What Actually Saves Time',
-    excerpt: 'I tested 6 AI business tools for 3 weeks on real work. Here\'s which ones actually saved time and which were just expensive toys.',
-    category: 'AI Business',
-    slug: 'best-ai-tools-small-business',
-    date: 'Apr 10, 2026',
-    readTime: '11 min read'
-  },
-  {
-    title: 'Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?',
-    excerpt: 'I needed social media graphics, presentation slides, and a flyer. Both tools claim AI magic. Only one delivered consistently.',
-    category: 'AI Business',
-    slug: 'canva-ai-vs-adobe-firefly',
-    date: 'Apr 8, 2026',
-    readTime: '10 min read'
-  },
-  {
-    title: 'Best AI Video Generators in 2026: Same Clip, 5 Tools',
-    excerpt: 'AI video is finally usable. I tested Runway, Sora, Kling, Pika, and HeyGen with the same prompt. The quality gap is real.',
-    category: 'AI Video & Audio',
-    slug: 'best-ai-video-generators',
-    date: 'Apr 5, 2026',
-    readTime: '10 min read'
-  },
-  {
-    title: 'ElevenLabs Review: The Most Realistic AI Voice I\'ve Ever Heard',
-    excerpt: 'I used ElevenLabs for a month to narrate presentations, create voice-overs, and clone my own voice. Here\'s the honest verdict.',
-    category: 'AI Video & Audio',
-    slug: 'elevenlabs-review',
-    date: 'Apr 2, 2026',
-    readTime: '9 min read'
-  },
-  {
-    title: 'ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?',
-    excerpt: 'I tested all three for everyday tasks—writing emails, planning trips, summarizing articles. The winner surprised me.',
-    category: 'AI Chat',
-    slug: 'chatgpt-vs-claude-vs-gemini',
-    date: 'Mar 20, 2026',
-    readTime: '9 min read'
-  },
-  {
-    title: 'ChatGPT vs Claude for Content Writing: Which One Actually Helps?',
-    excerpt: 'I spent two weeks using both for daily content work. Here is what surprised me about the differences.',
-    category: 'AI Writing',
-    slug: 'chatgpt-vs-claude-writing',
-    date: 'Feb 15, 2026',
-    readTime: '8 min read'
-  },
-  {
-    title: 'Best AI Image Generators in 2026: I Tested 7 Tools So You Don\'t Have To',
-    excerpt: 'From Midjourney to Flux, I ran the same prompts through seven generators. The results were... interesting.',
-    category: 'AI Image',
-    slug: 'best-ai-image-generators',
-    date: 'Feb 10, 2026',
-    readTime: '12 min read'
-  }
+  { title: "AI Tool Pricing Compared 2026: What Do You Actually Get for Your Money", excerpt: "Pricing comparison across AI chat, writing, image, video, and coding tools. See what free tiers actually give you.", category: "AI Business", slug: "ai-tool-pricing-comparison-2026", date: "June 6, 2026", readTime: "8 min read" },
+  { title: "Open Source vs Proprietary AI Models in 2026", excerpt: "Llama 4, Mistral, Qwen vs GPT-5, Claude, Gemini. Where open source has caught up and where proprietary still leads.", category: "AI Chat", slug: "open-source-vs-proprietary-ai-2026", date: "June 5, 2026", readTime: "9 min read" },
+  { title: "The State of AI Coding Tools in 2026", excerpt: "From autocomplete to autonomous agents. How AI coding tools evolved and what it means for developers.", category: "AI Business", slug: "state-of-ai-coding-tools-2026", date: "June 5, 2026", readTime: "8 min read" },
+  { title: "How to Automate Your Workflows with AI in 2026", excerpt: "Connect your tools with Zapier, Make, and n8n. 5 AI automations you can set up today.", category: "AI Business", slug: "how-to-automate-workflows-with-ai-2026", date: "June 6, 2026", readTime: "7 min read" },
+  { title: "AI for Small Business: A Complete Guide 2026", excerpt: "Which AI tools actually save time and money for small businesses. Marketing, support, ops, and sales.", category: "AI Business", slug: "ai-for-small-business-complete-guide-2026", date: "June 6, 2026", readTime: "9 min read" },
+  { title: "How to Build a Website with AI in 2026", excerpt: "From idea to live site using AI tools for design, code, content, and deployment. No coding required.", category: "AI Business", slug: "how-to-build-website-with-ai-2026", date: "June 7, 2026", readTime: "8 min read" },
+  { title: "AI Prompt Engineering Guide 2026: Techniques That Actually Work", excerpt: "Practical guide to prompt engineering for ChatGPT, Claude, and Gemini. From basic to advanced strategies.", category: "AI Chat", slug: "ai-prompt-engineering-guide-2026", date: "June 7, 2026", readTime: "8 min read" },
+  { title: "How to Use AI for Academic Research: A Guide for Students", excerpt: "Using AI tools like ChatGPT, Claude, Perplexity, and Elicit for literature reviews and citation management.", category: "AI Writing", slug: "how-to-use-ai-for-academic-research", date: "June 7, 2026", readTime: "7 min read" },
+  { title: "Gamma vs Tome vs Beautiful.ai vs Decktopus: AI Presentation Tools Tested", excerpt: "Same presentation, four AI tools. Which actually saves you time creating slides?", category: "AI Business", slug: "ai-presentation-tools-compared-2026", date: "June 8, 2026", readTime: "7 min read" },
+  { title: "Runway vs Pika vs Kling vs Sora: AI Video Generation Benchmarked", excerpt: "Identical prompts across four AI video generators. Quality, speed, and cost compared.", category: "AI Video & Audio", slug: "ai-video-generators-comparison-2026", date: "June 8, 2026", readTime: "8 min read" },
+  { title: "Best AI Chatbot Platforms in 2026: Chatbase vs Botpress vs Voiceflow vs Stack AI", excerpt: "Build custom AI chatbots. Which platform fits your use case and skill level?", category: "AI Business", slug: "best-ai-chatbot-platforms-2026", date: "June 8, 2026", readTime: "8 min read" },
+  { title: "GitHub Copilot vs Cursor vs Windsurf: Best AI Code Editor in 2026", excerpt: "Real coding projects tested across three AI editors. Which makes you most productive?", category: "AI Chat", slug: "github-copilot-vs-cursor-vs-windsurf", date: "June 9, 2026", readTime: "8 min read" },
+  { title: "Perplexity vs Google Gemini Deep Research: Which AI Research Tool Wins?", excerpt: "Real-time search vs deep research reports. Speed vs depth compared.", category: "AI Chat", slug: "perplexity-vs-gemini-deep-research", date: "June 9, 2026", readTime: "7 min read" },
+  { title: "Notion AI vs Coda AI vs ClickUp AI: Which AI Workspace Delivers?", excerpt: "AI writing, data analysis, and task management compared across three workspace platforms.", category: "AI Business", slug: "notion-ai-vs-coda-ai", date: "June 9, 2026", readTime: "9 min read" },
+  { title: "Free AI Image Generators That Actually Work in 2026", excerpt: "I tested 7 free AI image generators with the same prompts. Here's what actually works.", category: "AI Image", slug: "free-ai-image-generators", date: "June 7, 2026", readTime: "12 min read" },
+  { title: "AI Music Generators Compared: Suno vs Udio vs Stable Audio vs Riffusion", excerpt: "Same song, four different AI outputs. Which one is actually worth your time?", category: "AI Video & Audio", slug: "ai-music-generators-compared", date: "June 7, 2026", readTime: "14 min read" },
+  { title: "I Tested Gemini 3.5 Flash for 24 Hours", excerpt: "Google says Gemini 3.5 Flash beats its own flagship model. Here is what the benchmarks do not tell you.", category: "AI Chat", slug: "gemini-3-5-flash-review", date: "June 7, 2026", readTime: "14 min read" },
+  { title: "Free AI Writing Tools That Don't Suck in 2026", excerpt: "I tested 7 free AI writing tools for two weeks on real work. Here's which ones are genuinely useful.", category: "AI Writing", slug: "free-ai-writing-tools", date: "May 19, 2026", readTime: "11 min read" },
+  { title: "What AI Tools Do Beginners Actually Need?", excerpt: "I paid for 8 AI tools and tested each one for days on real tasks. Here's what actually helps.", category: "AI Chat", slug: "essential-ai-tools-for-beginners", date: "May 16, 2026", readTime: "13 min read" },
+  { title: "Midjourney vs GPT Image vs Stable Diffusion: Best Images 2026?", excerpt: "Same prompts across three AI image generators. One won on aesthetics, one on accuracy.", category: "AI Image", slug: "midjourney-vs-dalle-vs-stable-diffusion", date: "May 14, 2026", readTime: "11 min read" },
+  { title: "How to Use Jasper AI for Blog Posts (Step-by-Step Tutorial)", excerpt: "$69/month for 6 weeks on real blog posts. Honest walkthrough from Brand Voice setup to publishing.", category: "AI Writing", slug: "jasper-ai-blog-tutorial", date: "Apr 28, 2026", readTime: "10 min read" },
+  { title: "Best AI Tools for Small Business in 2026", excerpt: "6 AI business tools tested for 3 weeks. Which ones actually saved time and which were just expensive toys.", category: "AI Business", slug: "best-ai-tools-small-business", date: "Apr 10, 2026", readTime: "11 min read" },
+  { title: "Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?", excerpt: "Social media graphics, slides, flyers. Both claim AI magic. Only one delivered consistently.", category: "AI Business", slug: "canva-ai-vs-adobe-firefly", date: "Apr 8, 2026", readTime: "10 min read" },
+  { title: "Best AI Video Generators in 2026: Same Clip, 5 Tools", excerpt: "Runway, Sora, Kling, Pika, and HeyGen with the same prompt. The quality gap is real.", category: "AI Video & Audio", slug: "best-ai-video-generators", date: "Apr 5, 2026", readTime: "10 min read" },
+  { title: "ElevenLabs Review: The Most Realistic AI Voice", excerpt: "Used ElevenLabs for a month to narrate presentations and clone my voice. Honest verdict.", category: "AI Video & Audio", slug: "elevenlabs-review", date: "Apr 2, 2026", readTime: "9 min read" },
+  { title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Actually Wins?", excerpt: "Tested all three for everyday tasks. The winner surprised me.", category: "AI Chat", slug: "chatgpt-vs-claude-vs-gemini", date: "Mar 20, 2026", readTime: "9 min read" },
+  { title: "ChatGPT vs Claude for Content Writing: Which One Helps?", excerpt: "Two weeks of daily content work with both. What surprised me about the differences.", category: "AI Writing", slug: "chatgpt-vs-claude-writing", date: "Feb 15, 2026", readTime: "8 min read" },
+  { title: "Best AI Chatbot for Customer Support in 2026", excerpt: "Tested 5 AI support platforms on real customer inquiries. Speed, accuracy, and cost breakdown.", category: "AI Business", slug: "ai-chatbot-customer-support", date: "Mar 25, 2026", readTime: "10 min read" },
+  { title: "Best AI Image Generators in 2026: I Tested 7 Tools", excerpt: "From Midjourney to Flux, same prompts through seven generators. The results were interesting.", category: "AI Image", slug: "best-ai-image-generators", date: "Feb 10, 2026", readTime: "12 min read" }
 ];
 
-const structuredData = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
+var structuredData = JSON.stringify({
+  "@context": "https://schema.org", "@type": "CollectionPage",
   "name": "Blog - AI Tool Reviews and Tutorials",
-  "description": "Honest, in-depth reviews and tutorials for AI tools. No sponsored content, just real-world testing.",
+  "description": "Honest, in-depth reviews and tutorials for AI tools. 30+ articles. No sponsored content, just real-world testing.",
   "url": "https://genaipick.com/blog/"
 });
 ---
 
-<BaseLayout
-  title="Blog"
-  description="AI tool reviews, tutorials, and comparisons. Honest testing of the tools that actually matter."
-  structuredData={structuredData}
->
-  <section class="page-header">
-    <div class="container">
-      <h1>Blog</h1>
-      <p>In-depth AI tool reviews and tutorials. No fluff, no sponsored content—just real-world testing.</p>
-    </div>
-  </section>
-  
-  <section class="articles-section" style="padding-top: 0;">
-    <div class="container">
-      <div class="articles-grid">
-        {articles.map(article => (
-          <article class="article-card">
-            <div class="content">
-              <span class="category">{article.category}</span>
-              <h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3>
-              <p>{article.excerpt}</p>
-              <div class="meta">
-                <span>{article.date}</span>
-                <span>{article.readTime}</span>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
+<BaseLayout title="Blog" description="AI tool reviews, tutorials, and comparisons. 30+ in-depth articles with honest testing of the tools that actually matter." structuredData={structuredData}>
+  <section class="page-header"><div class="container"><h1>Blog</h1><p>In-depth AI tool reviews and tutorials. No fluff, no sponsored content — just real-world analysis.</p></div></section>
+  <section class="articles-section" style="padding-top: 0;"><div class="container"><div class="articles-grid">
+    {articles.map(article => (<article class="article-card"><div class="content"><span class="category">{article.category}</span><h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3><p>{article.excerpt}</p><div class="meta"><span>{article.date}</span><span>{article.readTime}</span></div></div></article>))}
+  </div></div></section>
 </BaseLayout>
