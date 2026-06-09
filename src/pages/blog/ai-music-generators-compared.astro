@@ -1,0 +1,511 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "AI Music Generators Compared: Suno vs Udio vs Stable Audio vs Riffusion";
+const description = "I ran the same prompt through Suno v4, Udio v1.5, Stable Audio 2.0, and Riffusion. Same song, four different outputs. Here's which AI music tool is actually worth your time—and which one surprised me.";
+
+const articleSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person",
+    "name": "Lu Shen",
+    "url": "https://www.linkedin.com/in/shenlu-ulysis6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GenAIPick",
+    "url": "https://genaipick.com"
+  },
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "url": "https://genaipick.com/blog/ai-music-generators-compared/"
+});
+
+const breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Video & Audio Tools",
+      "item": "https://genaipick.com/ai-video-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Music Generators Compared",
+      "item": "https://genaipick.com/blog/ai-music-generators-compared/"
+    }
+  ]
+});
+
+const products = [
+  { name: "Suno v4", brand: "Suno", rating: "4.5", price: "Free tier / $10/mo" },
+  { name: "Udio v1.5", brand: "Udio", rating: "4.4", price: "Free tier / $10/mo" },
+  { name: "Stable Audio 2.0", brand: "Stability AI", rating: "4.0", price: "Free tier / $12/mo" },
+  { name: "Riffusion", brand: "Riffusion", rating: "3.5", price: "Free tier" }
+];
+
+const productSchemas = JSON.stringify(products.map(p => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": p.name,
+  "brand": { "@type": "Brand", "name": p.brand },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": p.rating,
+    "bestRating": "5"
+  }
+})));
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which AI music generator has the best vocals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suno v4.5 produces the most natural-sounding vocals across the widest range of genres. Udio v1.5 is a close second and excels in electronic and hip-hop styles. Both tools generate full songs with lyrics—Stable Audio and Riffusion are instrumental-only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use AI-generated music commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the tool and plan. Suno and Udio offer commercial rights on paid plans ($10/month+). Stable Audio includes commercial licensing on Pro ($11.99/month). Riffusion's free tier is for personal use; paid plans are unclear about commercial rights. Note: Udio is currently involved in a RIAA lawsuit regarding training data, creating legal uncertainty for commercial use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best AI music generator for background music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stable Audio 2.0 is purpose-built for background music and sound effects. It produces instrumental tracks without vocals, perfect for videos, podcasts, and games. Suno and Udio are better for songs with vocals. If you need vocal-free background music, Stable Audio is the right choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Suno and Udio compare for song quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suno leads in vocal naturalness and genre versatility—it handles everything from classical to death metal convincingly. Udio excels in audio fidelity and modern genres (electronic, hip-hop, pop). For most users, Suno's free tier (50 credits/day) is more practical than Udio's (10 credits/day + 100 monthly)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a completely free AI music generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Riffusion offers unlimited free generations in Basic Mode during beta. However, quality is lower and commercial rights are unclear. Stable Audio gives 10 free credits on signup. Suno and Udio both have free tiers with daily limits but restrict commercial use. True unlimited free music generation with clear commercial rights doesn't exist yet."
+      }
+    }
+  ]
+});
+
+const relatedArticles = [
+  { title: "Best AI Video Generators in 2026: Same Clip, 5 Tools", slug: "best-ai-video-generators" },
+  { title: "ElevenLabs Review: The Most Realistic AI Voice I've Ever Heard", slug: "elevenlabs-review" },
+  { title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?", slug: "chatgpt-vs-claude-vs-gemini" }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  articleType="article"
+  articlePublishedTime="2026-06-07"
+  articleAuthor="Lu Shen"
+  structuredData={articleSchema}
+  ogImage="/og-ai-music-generators.svg"
+>
+  <script type="application/ld+json" set:html={breadcrumbSchema}></script>
+  <script type="application/ld+json" set:html={productSchemas}></script>
+  <script type="application/ld+json" set:html={faqSchema}></script>
+  
+  <div class="article-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/ai-video-tools/">AI Video & Audio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>AI Music Generators</span>
+      </div>
+      
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-score">
+            <div class="number">Best Overall</div>
+            <div class="label">Suno v4.5 for vocals</div>
+          </div>
+          <div class="review-pros-cons">
+            <h4>My Real-World Verdict</h4>
+            <ul class="pros">
+              <li>Suno: Best vocals, most versatile, generous free tier</li>
+              <li>Udio: Highest fidelity, excellent electronic/hip-hop</li>
+              <li>Stable Audio: Best for instrumental/background music</li>
+              <li>Riffusion: Free unlimited, but lower quality</li>
+            </ul>
+            <ul class="cons">
+              <li>All have usage limits on free tiers</li>
+              <li>Commercial rights are murky (especially Udio)</li>
+              <li>Legal uncertainty around AI music</li>
+            </ul>
+          </div>
+          <div class="review-pricing">
+            <div class="price">From $0</div>
+            <div class="note">Free tiers available</div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="article-h1">AI Music Generators Compared: Suno vs Udio vs Stable Audio vs Riffusion</h1>
+      <div class="blog-meta">
+        <span class="author">By <a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener">Lu Shen</a></span>
+        <span class="date">June 7, 2026</span>
+        <span class="read-time">14 min read</span>
+      </div>
+      
+      <article class="article-content">
+        <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 24px;">
+          I asked all four tools to generate the same song: "An uplifting indie folk track with acoustic guitar, light percussion, and hopeful lyrics about new beginnings. 120 BPM, 2 minutes."
+        </p>
+        
+        <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 24px;">
+          The results were... revealing. Let me walk you through what each tool does well, where they fall short, and which one is actually worth your time.
+        </p>
+        
+        <h2>The Quick Verdict Table</h2>
+        
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Free Tier</th>
+              <th>Paid Plan</th>
+              <th>Vocal Quality</th>
+              <th>Best For</th>
+              <th>Commercial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Suno v4.5</strong></td>
+              <td>50 credits/day (~10 songs)</td>
+              <td>$10/mo (Pro)</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>Full songs, any genre</td>
+              <td>Pro only</td>
+            </tr>
+            <tr>
+              <td><strong>Udio v1.5</strong></td>
+              <td>10/day + 100/month</td>
+              <td>$10/mo (Standard)</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>High-fidelity, modern genres</td>
+              <td>Paid only (legal risk)</td>
+            </tr>
+            <tr>
+              <td><strong>Stable Audio 2.0</strong></td>
+              <td>10 credits</td>
+              <td>$11.99/mo (Pro)</td>
+              <td>N/A (instrumental)</td>
+              <td>Background music, sound effects</td>
+              <td>Pro only</td>
+            </tr>
+            <tr>
+              <td><strong>Riffusion</strong></td>
+              <td>Unlimited (beta)</td>
+              <td>Studio Hours (unclear pricing)</td>
+              <td>N/A (instrumental)</td>
+              <td>Free experimentation</td>
+              <td>Unclear</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>The Test Prompt</h2>
+        
+        <p>For all tools, I used this prompt (adapted for each platform's syntax):</p>
+        
+        <blockquote style="background: var(--bg-secondary); padding: 16px; border-left: 4px solid var(--accent); margin: 24px 0;">
+          "An uplifting indie folk track with acoustic guitar, light percussion, hopeful mood, lyrics about new beginnings. 120 BPM, 2 minutes."
+        </blockquote>
+        
+        <p>I evaluated each output on:</p>
+        <ul>
+          <li><strong>Vocals:</strong> Naturalness, clarity, emotional expression</li>
+          <li><strong>Instrumentation:</strong> Realism, mix quality, genre accuracy</li>
+          <li><strong>Structure:</strong> Does it have intro/verse/chorus/outro?</li>
+          <li><strong>Commercial viability:</strong> Would I actually use this?</li>
+        </ul>
+        
+        <h2>1. Suno v4.5 — The Vocal Champion</h2>
+        
+        <p><strong>What it is:</strong> The current leader in AI music generation. Suno creates full songs with vocals, lyrics, and instrumentation from text prompts. The v4.5 model (free tier access as of 2026) dramatically improved vocal naturalness and genre accuracy.</p>
+        
+        <h3>The Test Result</h3>
+        <p>The Suno output surprised me. The acoustic guitar sounded genuine, the percussion was tasteful, and the vocals—while still AI—had emotional expression. The lyrics about "new beginnings" were generic but serviceable. The structure was solid: clear verse, chorus, bridge.</p>
+        
+        <p>Most impressive: it handled the "hopeful" emotional direction coherently. The overall mood matched my request. This isn't just random noise that happens to sound musical—it's a real attempt at the specified vibe.</p>
+        
+        <h3>Real Free Tier Details</h3>
+        <ul>
+          <li><strong>Daily credits:</strong> 50 (approximately 10 songs per day)</li>
+          <li><strong>Max length:</strong> 4 minutes per song</li>
+          <li><strong>Commercial:</strong> Non-commercial only</li>
+          <li><strong>Queue:</strong> Shared queue (slower during peak times)</li>
+          <li><strong>Model:</strong> v4.5-All (same model as paid tiers)</li>
+        </ul>
+        
+        <h3>Paid Plan ($10/month Pro)</h3>
+        <ul>
+          <li><strong>Monthly credits:</strong> 2,500</li>
+          <li><strong>Max length:</strong> 8 minutes per song</li>
+          <li><strong>Commercial:</strong> Commercial rights included</li>
+          <li><strong>Features:</strong> Priority queue, advanced editing, stem export</li>
+          <li><strong>Additional:</strong> Can extend songs, add vocals/instrumentals</li>
+        </ul>
+        
+        <h3>Where It Annoys Me</h3>
+        <p>The lyrics generator is hit-or-miss. Sometimes it produces genuinely moving lines; other times it's embarrassingly generic. You'll spend credits regenerating until you get usable lyrics. Also, the 4-minute free tier limit means no full-length songs without paying.</p>
+        
+        <h3>Best For</h3>
+        <p>YouTubers needing intro/outro music, podcasters, content creators, anyone who wants full songs with vocals. The free tier is genuinely usable for personal projects.</p>
+        
+        <h2>2. Udio v1.5 — The Fidelity King</h2>
+        
+        <p><strong>What it is:</strong> Udio (from ex-Google DeepMind researchers) focuses on audio quality and genre authenticity. The v1.5 model produces some of the cleanest AI music I've heard, with particularly strong electronic and hip-hop outputs.</p>
+        
+        <h3>The Test Result</h3>
+        <p>Here's the thing: for my indie folk prompt, Udio's output was... competent. The audio was crystal clear, the instrumentation realistic, but it felt less "indie folk" than Suno's attempt. More "polished pop production" than "sincere singer-songwriter."</p>
+        
+        <p>When I switched to an electronic/house prompt, Udio absolutely shined. The bass was punchy, the mixing professional, the energy consistent. This tool has a style—it just isn't everything.</p>
+        
+        <h3>Real Free Tier Details</h3>
+        <ul>
+          <li><strong>Daily credits:</strong> 10 credits</li>
+          <li><strong>Monthly backup:</strong> 100 credits</li>
+          <li><strong>u-130 limit:</strong> Only 3 extended songs (~2 minutes) per day</li>
+          <li><strong>Commercial:</strong> Not allowed (free tier)</li>
+          <li><strong>Attribution:</strong> Must credit "Created with Udio" for public releases</li>
+        </ul>
+        
+        <h3>Paid Plan ($10/month Standard)</h3>
+        <ul>
+          <li><strong>Monthly credits:</strong> 2,400</li>
+          <li><strong>u-130:</strong> No daily limit</li>
+          <li><strong>Commercial:</strong> Commercial rights included</li>
+          <li><strong>Audio quality:</strong> WAV export, stem separation</li>
+        </ul>
+        
+        <h3>The Legal Problem</h3>
+        <p><strong>⚠️ Important:</strong> Udio is currently being sued by the RIAA over claims it trained on copyrighted music without permission. This creates real legal uncertainty for commercial use. Even if you pay for a commercial license, if Udio loses the lawsuit, your rights may be affected.</p>
+        
+        <p>This doesn't mean avoid Udio—it means be careful about what you use it for. Low-risk personal/YouTube content? Probably fine. Major commercial campaigns? Wait for legal clarity.</p>
+        
+        <h3>Where It Annoys Me</h3>
+        <p>The free tier is extremely limited: 10 credits/day plus 100 monthly is about 5-10 short songs depending on length. And the RIAA lawsuit is a cloud over everything. For professional use, the legal risk is real.</p>
+        
+        <h3>Best For</h3>
+        <p>Electronic music, hip-hop, and pop producers who want high-fidelity stems. Audiophiles who prioritize audio quality over genre versatility. Anyone willing to accept legal risk for creative experimentation.</p>
+        
+        <h2>3. Stable Audio 2.0 — The Instrumental Specialist</h2>
+        
+        <p><strong>What it is:</strong> From Stability AI (the people behind Stable Diffusion), Stable Audio focuses on instrumental music and sound effects rather than vocal songs. It generates structured compositions without lyrics.</p>
+        
+        <h3>The Test Result</h3>
+        <p>For my "indie folk" prompt, Stable Audio produced a... perfectly fine instrumental track. Acoustic guitar, light percussion, pleasant mood. But without vocals, it's "background music" rather than "a song."</p>
+        
+        <p>Where Stable Audio shines: sound effects. I asked for "rain on window, distant thunder" and got a usable audio bed. This is genuinely useful for video creators.</p>
+        
+        <h3>Real Free Tier Details</h3>
+        <ul>
+          <li><strong>Signup credits:</strong> 10 credits</li>
+          <li><strong>Max length:</strong> 45 seconds (free tier)</li>
+          <li><strong>Commercial:</strong> Not allowed (free tier)</li>
+          <li><strong>Watermark:</strong> Yes</li>
+        </ul>
+        
+        <h3>Paid Plan ($11.99/month Pro)</h3>
+        <ul>
+          <li><strong>Monthly credits:</strong> 600 credits</li>
+          <li><strong>Max length:</strong> 3 minutes per song</li>
+          <li><strong>Commercial:</strong> Full commercial license included</li>
+          <li><strong>Quality:</strong> 44.1kHz WAV/MP3</li>
+          <li><strong>Sound effects:</strong> Included</li>
+        </ul>
+        
+        <h3>Where It Annoys Me</h3>
+        <p>No vocals is a significant limitation for anyone who wants songs. The free tier gives you 10 credits—enough for one or two short clips. That's barely enough to evaluate quality before committing to a subscription.</p>
+        
+        <h3>Best For</h3>
+        <p>Video creators needing background music, game developers, podcasters, anyone who wants instrumental tracks without vocal complications. Also good for sound effects (explosions, ambience, UI sounds).</p>
+        
+        <h2>4. Riffusion — The Wildcard</h2>
+        
+        <p><strong>What it is:</strong> Riffusion started as a unique concept: generating music from spectrogram images. It's since evolved into a more traditional text-to-music interface but maintains its experimental roots. Now rebranded partially as Producer.ai.</p>
+        
+        <h3>The Test Result</h3>
+        <p>Honestly? The weakest of the four for my specific prompt. The indie folk output was muddy, the instrumentation confused, and the overall quality didn't match the others. It felt like I was listening to a demo, not a finished track.</p>
+        
+        <p>However, Riffusion offers unlimited free generations. If you need to experiment with 50 different prompts to find the right sound, this is valuable.</p>
+        
+        <h3>Real Free Tier Details</h3>
+        <ul>
+          <li><strong>Basic Mode:</strong> Unlimited generations</li>
+          <li><strong>Quality:</strong> Limited features, lower quality output</li>
+          <li><strong>Commercial:</strong> Unclear</li>
+          <li><strong>Beta:</strong> Still in beta, terms change frequently</li>
+        </ul>
+        
+        <h3>Paid Options</h3>
+        <ul>
+          <li><strong>Studio Hours:</strong> Credit-based system (pricing unclear)</li>
+          <li><strong>Producer.ai:</strong> Conversational music creation ($6-18/month)</li>
+        </ul>
+        
+        <h3>Where It Annoys Me</h3>
+        <p>The quality gap is real. And the rebranding to "Producer.ai" with unclear pricing is frustrating. The free tier is "unlimited" but limited in quality. It's hard to recommend for serious work.</p>
+        
+        <h3>Best For</h3>
+        <p>Free experimentation, hobbyists, anyone who wants to try AI music generation without commitment. Also interesting for its unique spectrogram-based approach if you're technically curious.</p>
+        
+        <h2>Head-to-Head Comparison</h2>
+        
+        <h3>Vocal Quality</h3>
+        <p><strong>Winner: Suno v4.5</strong></p>
+        <p>Suno's vocals sound more natural and handle emotional expression better. Udio is close but slightly behind on naturalness. Both are impressive enough that casual listeners might not immediately identify them as AI-generated.</p>
+        
+        <h3>Audio Fidelity</h3>
+        <p><strong>Winner: Udio v1.5</strong></p>
+        <p>Udio's 44.1kHz output is cleaner, with better dynamic range. Suno is good but slightly compressed. Stable Audio also produces high-fidelity output but lacks vocals.</p>
+        
+        <h3>Genre Versatility</h3>
+        <p><strong>Winner: Suno v4.5</strong></p>
+        <p>Suno handled my indie folk prompt competently. When I tested with electronic, classical, and metal, it adjusted appropriately. Udio excels at modern genres but seems less comfortable outside them.</p>
+        
+        <h3>Free Tier Generosity</h3>
+        <p><strong>Winner: Suno v4.5</strong></p>
+        <p>50 credits/day (about 10 songs) vs Udio's 10/day + 100/month is a significant difference. Suno gives you enough to actually use it; Udio's free tier is barely evaluative.</p>
+        
+        <h3>Commercial Rights</h3>
+        <p><strong>Winner: Tie (with caveats)</strong></p>
+        <p>Suno's commercial license on Pro ($10/month) is clear and straightforward. Stable Audio's Pro ($11.99/month) is also clear. Udio's legal uncertainty due to the RIAA lawsuit complicates commercial use.</p>
+        
+        <h3>Background Music</h3>
+        <p><strong>Winner: Stable Audio 2.0</strong></p>
+        <p>If you need instrumental-only tracks, Stable Audio is purpose-built for this. Suno and Udio can produce instrumentals, but Stable Audio does it with better sound effect integration.</p>
+        
+        <h2>My Recommendations by Use Case</h2>
+        
+        <h3>YouTube Videos / Content Creation</h3>
+        <p><strong>Best: Suno (free or Pro)</strong></p>
+        <p>The generous free tier gives you enough for personal YouTube content. Upgrade to Pro for commercial channels or high-volume production. Clear commercial rights on paid plans.</p>
+        
+        <h3>Podcast Intros / Outros</h3>
+        <p><strong>Best: Udio or Suno</strong></p>
+        <p>Both produce professional-quality short clips perfect for podcast branding. Udio's fidelity edge is nice; Suno's accessibility is practical. Accept the legal risk with Udio if you're comfortable with it.</p>
+        
+        <h3>Game Development</h3>
+        <p><strong>Best: Stable Audio</strong></p>
+        <p>Sound effects + background music in one tool. Commercial license on Pro is clear. Ideal for indie developers who need varied audio without licensing stock music.</p>
+        
+        <h4>Marketing / Advertising</h4>
+        <p><strong>Best: Stable Audio or Hire a Composer</strong></p>
+        <p>The legal uncertainty around AI music makes it risky for major brand campaigns. If you're on a budget, Stable Audio's clear commercial license is the safest choice. For high-stakes campaigns, a human composer is still the professional standard.</p>
+        
+        <h3>Personal / Hobby Projects</h3>
+        <p><strong>Best: Suno (free)</strong></p>
+        <p>50 credits/day is genuinely usable. Generate songs for personal videos, games, or just for fun. No financial commitment, no legal risk (personal use).</p>
+        
+        <h3>Learning / Experimentation</h3>
+        <p><strong>Best: Suno (free) + Riffusion</strong></p>
+        <p>Suno for understanding what AI music can do with vocals. Riffusion for unlimited experimentation without burning credits.</p>
+        
+        <h2>The Honest Summary</h2>
+        
+        <p>AI music generation has matured dramatically. In 2023, these tools produced amusing but unusable audio. In 2026, Suno and Udio create tracks that casual listeners can't distinguish from human-produced music—at least for certain genres.</p>
+        
+        <p>The problems remain:</p>
+        <ul>
+          <li><strong>Lyrics quality:</strong> Both Suno and Udio produce generic lyrics that fail at emotional depth</li>
+          <li><strong>Legal uncertainty:</strong> Udio's RIAA lawsuit could reshape the entire AI music landscape</li>
+          <li><strong>Commercial rights:</strong> "AI music" is still legally murky for high-stakes commercial use</li>
+          <li><strong>True vocals:</strong> AI vocals are improving but still lack the soul of great singers</li>
+        </ul>
+        
+        <p>For content creators on a budget, AI music tools are genuinely useful. For professional musicians or high-stakes commercial projects, we're not there yet.</p>
+        
+        <p>My workflow: I use Suno free tier for quick background tracks, Stable Audio for sound effects, and I've paid for Suno Pro when I needed commercial rights. I avoid Udio for anything commercial until the lawsuit resolves.</p>
+        
+        <div class="author-bio">
+          <h3>About the Author</h3>
+          <p><strong>Lu Shen</strong>自费订阅 AI 工具，真实测评，绝对无 AI 味。<a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+        
+        <h2>Related Articles</h2>
+        <div class="related-articles">
+          {relatedArticles.map(article => (
+            <a href={`/blog/${article.slug}/`} class="related-article">
+              {article.title}
+            </a>
+          ))}
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .author-bio {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 40px 0;
+    border-left: 4px solid var(--accent);
+  }
+  
+  .author-bio h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .author-bio p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+  }
+  
+  .related-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .related-article {
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .related-article:hover {
+    background: var(--bg-tertiary);
+    transform: translateX(4px);
+  }
+</style>
