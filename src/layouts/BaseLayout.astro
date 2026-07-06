@@ -625,6 +625,22 @@ const websiteSchema = JSON.stringify({
         font-size: 24px;
         margin-bottom: 20px;
       }
+
+      /* Article Author Byline */
+      .blog-meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+      .blog-meta .author a {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .blog-meta .author a:hover { color: var(--primary); }
       
       /* Footer */
       .footer {
