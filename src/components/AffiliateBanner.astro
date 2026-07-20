@@ -40,6 +40,12 @@ const { variant = 'full', title = '🔥 Sponsored Recommendations' } = Astro.pro
         <p class="affiliate-desc">International eSIM data plans. Use code <strong>laolu</strong> for exclusive discount.</p>
       </div>
     </a>
+    <a href="https://my.dnshe.com/go.php?code=CkzWl9VhhW" target="_blank" rel="sponsored noopener" class="affiliate-card">
+      <div class="affiliate-card-inner">
+        <span class="affiliate-brand">DNSHE</span>
+        <p class="affiliate-desc">Get a <strong>free domain</strong> + global DNS acceleration. Quick setup for your projects.</p>
+      </div>
+    </a>
   </div>
 </div>
 
@@ -78,11 +84,11 @@ const { variant = 'full', title = '🔥 Sponsored Recommendations' } = Astro.pro
   }
   .affiliate-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 12px;
   }
   .affiliate-grid-compact {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 8px;
   }
   .affiliate-card {
@@ -117,15 +123,5 @@ const { variant = 'full', title = '🔥 Sponsored Recommendations' } = Astro.pro
   }
   .affiliate-desc strong {
     color: var(--primary);
-  }
-  @media (max-width: 768px) {
-    .affiliate-grid, .affiliate-grid-compact {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 480px) {
-    .affiliate-grid, .affiliate-grid-compact {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
