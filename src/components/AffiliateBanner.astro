@@ -1,0 +1,131 @@
+---
+// AffiliateBanner — reusable sponsored recommendations component
+// Used on blog posts and static pages
+
+export interface Props {
+  variant?: 'compact' | 'full';
+  title?: string;
+}
+
+const { variant = 'full', title = '🔥 Sponsored Recommendations' } = Astro.props;
+---
+
+<div class="affiliate-banner" data-variant={variant}>
+  <div class="affiliate-header">
+    <span class="affiliate-title">{title}</span>
+    <span class="affiliate-disclosure">We may earn a commission at no extra cost to you</span>
+  </div>
+  <div class={`affiliate-grid ${variant === 'compact' ? 'affiliate-grid-compact' : ''}`}>
+    <a href="https://www.vultr.com/?ref=9908669" target="_blank" rel="sponsored noopener" class="affiliate-card">
+      <div class="affiliate-card-inner">
+        <span class="affiliate-brand">Vultr</span>
+        <p class="affiliate-desc">High-performance cloud servers. Get <strong>$300 free credit</strong> for new users.</p>
+      </div>
+    </a>
+    <a href="https://console.evoxt.com/aff.php?aff=4705" target="_blank" rel="sponsored noopener" class="affiliate-card">
+      <div class="affiliate-card-inner">
+        <span class="affiliate-brand">Evoxt</span>
+        <p class="affiliate-desc">Affordable VPS hosting starting at <strong>$2.99/mo</strong>. Global data centers.</p>
+      </div>
+    </a>
+    <a href="https://mesimgo.com?ref=KT0KHQXF" target="_blank" rel="sponsored noopener" class="affiliate-card">
+      <div class="affiliate-card-inner">
+        <span class="affiliate-brand">Mesimgo</span>
+        <p class="affiliate-desc">Reliable web hosting &amp; cloud services at <strong>competitive prices</strong>.</p>
+      </div>
+    </a>
+    <a href="https://xesim.cc/?DIST=REJDHl8%3D" target="_blank" rel="sponsored noopener" class="affiliate-card">
+      <div class="affiliate-card-inner">
+        <span class="affiliate-brand">xesim</span>
+        <p class="affiliate-desc">International eSIM data plans. Use code <strong>laolu</strong> for exclusive discount.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<style is:global>
+  .affiliate-banner {
+    margin: 32px 0;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .affiliate-banner[data-variant="compact"] {
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  .affiliate-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .affiliate-banner[data-variant="compact"] .affiliate-header {
+    margin-bottom: 12px;
+  }
+  .affiliate-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .affiliate-disclosure {
+    font-size: 11px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+  }
+  .affiliate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .affiliate-grid-compact {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .affiliate-card {
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .affiliate-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(79,70,229,0.08);
+    transform: translateY(-1px);
+  }
+  .affiliate-banner[data-variant="compact"] .affiliate-card {
+    padding: 10px 12px;
+  }
+  .affiliate-brand {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .affiliate-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .affiliate-desc strong {
+    color: var(--primary);
+  }
+  @media (max-width: 768px) {
+    .affiliate-grid, .affiliate-grid-compact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .affiliate-grid, .affiliate-grid-compact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

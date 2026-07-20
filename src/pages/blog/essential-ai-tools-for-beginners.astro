@@ -124,7 +124,8 @@ var relatedArticles = [
   { title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Use?", slug: "chatgpt-vs-claude-vs-gemini" },
   { title: "Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?", slug: "canva-ai-vs-adobe-firefly" },
   { title: "ElevenLabs Review: AI Voice Generation Worth the Price?", slug: "elevenlabs-review" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout
@@ -204,6 +205,10 @@ var relatedArticles = [
 
         <h2>The Problem With AI Tool Lists</h2>
         <p>Here's the thing about those "Top 10 AI Tools" posts: most of them are written by people who spent five minutes in each tool and called it a review. They don't tell you that half the tools on their list do basically the same thing, or that one of them is just a directory of other tools, not an actual product you can use.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
 
         <p>The post I found listed 12 tools. After going through all of them, I cut it down to 8 that are actually relevant to beginners. I dropped Portfoliotab and YouLearn because they're too narrow for a general audience. I skipped The AI Library because it's a navigation site, not a tool. I left out Kling AI because it overlaps with CapCut and video generation is a whole separate rabbit hole. And Podcastle? Too similar to ElevenLabs for this roundup.</p>
 

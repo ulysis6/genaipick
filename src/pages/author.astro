@@ -15,7 +15,8 @@ const structuredData = JSON.stringify({
   ],
   "description": "Small business owner and AI tools enthusiast sharing honest reviews and tutorials at GenAIPick.com.",
   "knowsAbout": ["AI Tools", "AI Chat Assistants", "AI Writing Tools", "AI Image Generation", "AI Video Generation", "AI Coding Tools", "Prompt Engineering", "Tech Reviews"]
-});
+
+import AffiliateBanner from '../components/AffiliateBanner.astro';});
 ---
 
 <BaseLayout title="Author — Lao Lu" description="Lao Lu writes honest, hands-on AI tool reviews and tutorials at GenAIPick. Small business owner and AI enthusiast." structuredData={structuredData}>
@@ -27,6 +28,10 @@ const structuredData = JSON.stringify({
       <div style="flex:1;min-width:250px;">
         <h1>Lao Lu</h1>
         <p style="font-size:16px;color:var(--primary);font-weight:600;margin-bottom:16px;">Small Business Owner · AI Tools Enthusiast · Reviewer at GenAIPick</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">I write honest, hands-on AI tool reviews and tutorials at GenAIPick. I also build free online tools at <a href="https://toolmixr.com" target="_blank" rel="noopener">ToolMixr</a> and share my full journey — including AdSense rejections and lessons learned — at <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a>. I pay for my own subscriptions, test tools for weeks before reviewing them, and tell you when something genuinely impresses me — or when it is just hype.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a href="https://lusdaily.com" target="_blank" rel="noopener" class="btn btn-secondary">📝 lusdaily.com</a>

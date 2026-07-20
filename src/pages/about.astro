@@ -7,7 +7,8 @@ const structuredData = JSON.stringify({
   "name": "About GenAIPick",
   "description": "Learn about GenAIPick - honest, hands-on AI tool reviews and tutorials.",
   "url": "https://genaipick.com/about/"
-});
+
+import AffiliateBanner from '../components/AffiliateBanner.astro';});
 ---
 
 <BaseLayout
@@ -21,6 +22,10 @@ const structuredData = JSON.stringify({
         <h1>About GenAIPick</h1>
         
         <p>Welcome to GenAIPick. I'm a tech enthusiast who's been using AI tools since before they were cool. I've watched the AI space explode over the past few years, and I've tried probably too many of these tools.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         
         <p>Why did I start this site? Because most AI tool reviews are either:</p>
         <ul>

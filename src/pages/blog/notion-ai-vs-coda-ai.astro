@@ -35,7 +35,8 @@ var relatedArticles = [
   { title: "Best AI Tools for Small Business in 2026", slug: "best-ai-tools-small-business" },
   { title: "What AI Tools Do Beginners Actually Need?", slug: "essential-ai-tools-for-beginners" },
   { title: "ChatGPT vs Claude vs Gemini", slug: "chatgpt-vs-claude-vs-gemini" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema + breadcrumbSchema + faqSchema} ogImage="/og-ai-workspace-comparison.svg">
@@ -67,6 +68,10 @@ var relatedArticles = [
 
         <h2>Why Workspace AI Matters</h2>
         <p>Every major productivity platform now bundles AI. Notion, Coda, and ClickUp are the three leaders in AI-powered workspaces — tools that combine documents, databases, and project management with generative AI. But they approach AI integration very differently.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         <p>Notion treats AI as a writing assistant embedded in your notes. Coda treats AI as a data analyst that works across tables and formulas. ClickUp treats AI as a project manager that automates workflows and generates tasks. Three different philosophies, three different user experiences.</p>
 
         <h2>Pricing: The Real Cost of Workspace AI</h2>

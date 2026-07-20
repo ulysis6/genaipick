@@ -5,7 +5,8 @@ var description = "I compared Chatbase, Botpress, Voiceflow, and Stack AI for bu
 var articleSchema = JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":title,"description":description,"author":{"@type":"Person","name":"Lu Shen"},"publisher":{"@type":"Organization","name":"GenAIPick","url":"https://genaipick.com"},"datePublished":"2026-06-08","dateModified":"2026-06-08","url":"https://genaipick.com/blog/best-ai-chatbot-platforms-2026/"});
 var breadcrumbSchema = JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://genaipick.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://genaipick.com/blog/"},{"@type":"ListItem","position":3,"name":title,"item":"https://genaipick.com/blog/best-ai-chatbot-platforms-2026/"}]});
 var faqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which chatbot platform is easiest?","acceptedAnswer":{"@type":"Answer","text":"Chatbase - upload a document and your chatbot is live in minutes. Botpress and Voiceflow require more setup but offer more customization."}},{"@type":"Question","name":"Can I build a support chatbot without coding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Chatbase and Stack AI offer no-code interfaces. Voiceflow visual flow builder is also coder-friendly."}},{"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"Entry-level: $19-49/month. Production chatbots: $100-500+/month depending on volume."}}]});
-var relatedArticles = [{ title: "Best AI Tools for Small Business", slug: "best-ai-tools-small-business" },{ title: "What AI Tools Do Beginners Actually Need?", slug: "essential-ai-tools-for-beginners" }];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';var relatedArticles = [{ title: "Best AI Tools for Small Business", slug: "best-ai-tools-small-business" },{ title: "What AI Tools Do Beginners Actually Need?", slug: "essential-ai-tools-for-beginners" }];
 ---
 <BaseLayout title={title} description={description} structuredData={articleSchema + breadcrumbSchema + faqSchema}>
 <div class="article-page"><div class="container"><nav class="breadcrumb"><a href="/">Home</a> <span class="breadcrumb-sep">&#8250;</span> <a href="/blog/">Blog</a> <span class="breadcrumb-sep">&#8250;</span> <span>Best AI Chatbot Platforms</span></nav><div class="article-content">
@@ -19,6 +20,10 @@ var relatedArticles = [{ title: "Best AI Tools for Small Business", slug: "best-
 <!-- SCREENSHOT: Four chatbot builder interfaces -->
 <table class="comparison-table"><thead><tr><th>Feature</th><th>Chatbase</th><th>Botpress</th><th>Voiceflow</th><th>Stack AI</th></tr></thead><tbody><tr><td>Best For</td><td>Quick Q&A</td><td>Enterprise support</td><td>Conversation flows</td><td>Workflow automation</td></tr><tr><td>Setup Time</td><td>5-15 min</td><td>1-3 hours</td><td>2-5 hours</td><td>1-4 hours</td></tr><tr><td>Starting Price</td><td>$19/mo</td><td>Free (self-host)</td><td>$50/mo</td><td>$49/mo</td></tr></tbody></table>
 <h2>Recommendations</h2><p><strong>Quick FAQ bot:</strong> Chatbase. <strong>Customer support:</strong> Botpress. <strong>Interactive experiences:</strong> Voiceflow. <strong>Internal tools:</strong> Stack AI.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
 <section class="faq" style="margin-top:40px;"><h2>FAQ</h2>
 <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Which is easiest?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Chatbase - upload a document and go live in minutes.</p></div></div>
 <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>No coding needed?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Yes - Chatbase and Stack AI offer no-code interfaces.</p></div></div>

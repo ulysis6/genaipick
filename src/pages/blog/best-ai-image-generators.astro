@@ -113,7 +113,8 @@ const relatedArticles = [
   { title: "Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?", slug: "canva-ai-vs-adobe-firefly" },
   { title: "ChatGPT vs Claude vs Gemini: Which AI Should You Use?", slug: "chatgpt-vs-claude-vs-gemini" },
   { title: "Best AI Video Generators in 2026: Same Clip, 5 Tools", slug: "best-ai-video-generators" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout
@@ -182,6 +183,10 @@ const relatedArticles = [
         
         <h2>The Test</h2>
         <p><strong>Same prompts, seven tools, no favorites.</strong> I tested across six categories: portrait photography, product shots, conceptual art, text-in-image, architectural visualization, and abstract design.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         
         <p>I made the prompts hard on purpose—unusual lighting, specific compositions, tricky object relationships. The kind of stuff that trips up weaker models. I scored each output on photorealism, prompt adherence, aesthetic quality, text rendering, and consistency.</p>
         

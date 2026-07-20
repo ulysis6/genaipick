@@ -122,7 +122,8 @@ const relatedArticles = [
   { title: "Midjourney vs GPT Image vs Stable Diffusion: Which Makes Better Images in 2026?", slug: "midjourney-vs-dalle-vs-stable-diffusion" },
   { title: "Best AI Image Generators in 2026: I Tested 7 Tools So You Don't Have To", slug: "best-ai-image-generators" },
   { title: "Canva AI vs Adobe Firefly: Which Makes Better Marketing Graphics?", slug: "canva-ai-vs-adobe-firefly" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout
@@ -258,6 +259,10 @@ const relatedArticles = [
         <h2>1. Flux Schnell — Best Quality, Actually Free</h2>
         
         <p><strong>What it is:</strong> The open-source model from Black Forest Labs (the team that built Stable Diffusion). Flux Schnell is Apache 2.0 licensed—meaning you can use it commercially, even for your startup's product images, completely free.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         
         <p><strong>The free part:</strong> It's open-source. Download the weights, run it on your GPU. No API costs, no subscription, no nothing. You own everything you generate.</p>
         

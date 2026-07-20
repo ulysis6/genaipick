@@ -119,7 +119,8 @@ const relatedArticles = [
   { title: "Best AI Video Generators in 2026: Same Clip, 5 Tools", slug: "best-ai-video-generators" },
   { title: "ElevenLabs Review: The Most Realistic AI Voice I've Ever Heard", slug: "elevenlabs-review" },
   { title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Should You Actually Use?", slug: "chatgpt-vs-claude-vs-gemini" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout
@@ -240,6 +241,10 @@ const relatedArticles = [
         <h2>The Test Prompt</h2>
         
         <p>For all tools, I used this prompt (adapted for each platform's syntax):</p>
+
+  <AffiliateBanner variant="compact" />
+
+
         
         <blockquote style="background: var(--bg-secondary); padding: 16px; border-left: 4px solid var(--accent); margin: 24px 0;">
           "An uplifting indie folk track with acoustic guitar, light percussion, hopeful mood, lyrics about new beginnings. 120 BPM, 2 minutes."

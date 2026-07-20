@@ -5,7 +5,8 @@ var description = "AI coding tools have evolved from autocomplete to agents that
 var articleSchema = JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":title,"description":description,"author":{"@type":"Person","name":"Lu Shen"},"publisher":{"@type":"Organization","name":"GenAIPick","url":"https://genaipick.com"},"datePublished":"2026-06-05","dateModified":"2026-06-05","url":"https://genaipick.com/blog/state-of-ai-coding-tools-2026/"});
 var breadcrumbSchema = JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://genaipick.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://genaipick.com/blog/"},{"@type":"ListItem","position":3,"name":title,"item":"https://genaipick.com/blog/state-of-ai-coding-tools-2026/"}]});
 var faqSchema = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will AI replace software developers?","acceptedAnswer":{"@type":"Answer","text":"Not in 2026. AI accelerates coding but architecture design, security analysis, and business requirements still need human judgment. The role shifts from writing to reviewing AI-generated code."}},{"@type":"Question","name":"Which AI coding tool for junior developers?","acceptedAnswer":{"@type":"Answer","text":"GitHub Copilot - inline completions teach good patterns and Copilot Chat explains code. Cursor is more powerful but better for experienced developers."}},{"@type":"Question","name":"How much time do AI coding tools save?","acceptedAnswer":{"@type":"Answer","text":"30-50% time savings on routine tasks. Highest for boilerplate, API integrations, unit tests, and refactoring. Less dramatic for complex algorithm design."}}]});
-var relatedArticles = [{ title: "Copilot vs Cursor vs Windsurf", slug: "github-copilot-vs-cursor-vs-windsurf" },{ title: "AI Prompt Engineering Guide", slug: "ai-prompt-engineering-guide-2026" }];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';var relatedArticles = [{ title: "Copilot vs Cursor vs Windsurf", slug: "github-copilot-vs-cursor-vs-windsurf" },{ title: "AI Prompt Engineering Guide", slug: "ai-prompt-engineering-guide-2026" }];
 ---
 <BaseLayout title={title} description={description} structuredData={articleSchema + breadcrumbSchema + faqSchema}>
 <div class="article-page"><div class="container"><nav class="breadcrumb"><a href="/">Home</a> <span class="breadcrumb-sep">&#8250;</span> <a href="/blog/">Blog</a> <span class="breadcrumb-sep">&#8250;</span> <span>State of AI Coding 2026</span></nav><div class="article-content">
@@ -17,6 +18,10 @@ var relatedArticles = [{ title: "Copilot vs Cursor vs Windsurf", slug: "github-c
 </div>
 <!-- SCREENSHOT: Timeline of AI coding tools 2021-2026 -->
 <h2>How We Got Here</h2><p>In 2021, Copilot completed lines of code. In 2026, AI agents write entire features, debug across files, and deploy to production.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
 <h2>Three Tiers of AI Coding</h2>
 <h3>Tier 1: Autocomplete (Mature)</h3><p>Tab-completion suggestions while typing. All major tools offer this. Table stakes in 2026.</p>
 <h3>Tier 2: Chat and Inline Editing (Mainstream)</h3><p>Chat about your codebase with full context. Ask for explanations, refactoring, bug fixes. Where most developers spend AI time.</p>

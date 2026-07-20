@@ -7,7 +7,8 @@ const structuredData = JSON.stringify({
   "name": "Terms of Service",
   "description": "GenAIPick terms of service - the rules for using this website.",
   "url": "https://genaipick.com/terms/"
-});
+
+import AffiliateBanner from '../components/AffiliateBanner.astro';});
 ---
 
 <BaseLayout
@@ -21,6 +22,10 @@ const structuredData = JSON.stringify({
         <h1>Terms of Service</h1>
         
         <p><strong>Last updated: February 2026</strong></p>
+
+  <AffiliateBanner variant="compact" />
+
+
         
         <p>By using GenAIPick, you agree to these terms. If you don't agree, please don't use this website.</p>
         

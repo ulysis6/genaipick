@@ -33,7 +33,8 @@ var faqSchema = JSON.stringify({
 var relatedArticles = [
   { title: "I Tested Gemini 3.5 Flash", slug: "gemini-3-5-flash-review" },
   { title: "Best AI Tools for Small Business", slug: "best-ai-tools-small-business" }
-];
+
+import AffiliateBanner from '../../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema + breadcrumbSchema + faqSchema}>
@@ -63,6 +64,10 @@ var relatedArticles = [
       </tbody></table>
       <h2>Which Should You Choose?</h2>
       <p><strong>Copilot</strong> if you want broadest IDE support and seamless GitHub integration. <strong>Cursor</strong> if you want the most ambitious AI-native editor. <strong>Windsurf</strong> if you want strong multi-file AI at the best price with no editor lock-in.</p>
+
+  <AffiliateBanner variant="compact" />
+
+
       <section class="faq" style="margin-top:40px;"><h2>Frequently Asked Questions</h2>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Can AI code editors replace developers?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>No. They amplify productivity but architecture decisions and complex debugging still require human judgment.</p></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)"><span>Which has the best free tier?</span><span class="faq-arrow">▸</span></button><div class="faq-answer"><p>Windsurf offers unlimited free autocomplete. Copilot Free gives 2,000 completions/month.</p></div></div>
