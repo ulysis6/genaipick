@@ -48,7 +48,10 @@ var breadcrumbSchema = JSON.stringify({
 
     <p>I'm writing this on a laptop with integrated graphics and 2 GB of available VRAM — and I'm running a model that <strong>outperforms Llama 3.1 7B and Gemma 2 7B</strong> across most benchmarks. Not a stripped-down, barely-functional demo, either. Real inference. Usable speeds. A model I can actually get work done with.</p>
 
-    <img src="https://lusdaily.com/wp-content/uploads/2026/07/搞钱计划科技封面设计-1-scaled.png" alt="Running LLM on 2GB VRAM - MiniCPM-O setup" loading="lazy" />
+    <figure>
+      <img src="https://lusdaily.com/wp-content/uploads/2026/07/image-229-1024x683.png" alt="MiniCPM-O 6B running on 2GB VRAM" style="width:100%;max-width:800px;border-radius:8px;" loading="lazy" />
+      <figcaption>MiniCPM-O 6B running on integrated graphics with just 2 GB VRAM</figcaption>
+    </figure>
 
     <p>The model that makes this possible is <strong>MiniCPM-O 6B</strong>, a 6-billion-parameter multimodal model from OpenBMB that runs on as little as 2 GB of VRAM while matching or beating much larger models. In this guide, I'll walk through everything: why this model is different from everything else out there, how to install it with Ollama in under five minutes, how to add a ChatGPT-style interface with Open WebUI, and what real-world performance actually looks like.</p>
 
@@ -80,7 +83,10 @@ var breadcrumbSchema = JSON.stringify({
 
     <p>The benchmark numbers tell the story. On the Open LLM Leaderboard v2, MiniCPM-O 6B scores competitively with — and in several categories beats — both Llama 3.1 7B and Gemma 2 7B, despite being physically smaller and using a fraction of the memory. On MMLU-Pro, a harder variant of the standard knowledge benchmark, MiniCPM-O 6B actually edges ahead of several 7B and 8B models.</p>
 
-    <img src="https://lusdaily.com/wp-content/uploads/2026/06/默认标题__2026-06-2917_41_48-compressed.png" alt="MiniCPM-O benchmark comparison - outperforming larger models on 2GB VRAM" loading="lazy" />
+    <figure>
+      <img src="https://lusdaily.com/wp-content/uploads/2026/07/image-231-1024x590.png" alt="MiniCPM-O benchmark comparison" style="width:100%;max-width:800px;border-radius:8px;" loading="lazy" />
+      <figcaption>MiniCPM-O 6B outperforms larger 7B models on key benchmarks</figcaption>
+    </figure>
 
     <h2>Step 1: Install Ollama</h2>
 
