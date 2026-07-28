@@ -2,6 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = [
+  { title: "Vibe Coding: I Built a Desktop App in 4 Hours Using AI (And Zero Frontend Skills)", excerpt: "I sat down with VS Code, Claude Code, and DeepSeek V4 and built a real desktop floating widget in 4 hours. Here is exactly how vibe coding works and what you can build.", category: "AI Business", slug: "vibe-coding-4-hour-app", date: "August 2, 2026", readTime: "9 min read" },
+  { title: "Claude Code Alternatives: OpenCode — The Free Open-Source Replacement That Won't Get You Banned", excerpt: "Anthropic is cracking down on Claude Code accounts. Enter OpenCode: a free, open-source CLI coding agent that works with DeepSeek, Gemini, and other models.", category: "AI Chat", slug: "opencode-claude-code-alternative", date: "July 30, 2026", readTime: "8 min read" },
+  { title: "Free AI Voice Clone: Clone Your Voice, Generate Speech, and Dictate — All Running Locally", excerpt: "VoiceBox lets you clone your voice, do AI text-to-speech, and transcribe audio — all on your own computer, 100% free and private. No cloud needed.", category: "AI Video & Audio", slug: "free-voice-clone-local", date: "July 27, 2026", readTime: "8 min read" },
+  { title: "How to Run a Powerful LLM on Just 2GB of VRAM (Step by Step)", excerpt: "Most people think you need 8GB+ VRAM for local LLMs. MiniCPM-O 6B runs on 2GB and beats Gemma 7B. Full Ollama + Open WebUI setup guide.", category: "AI Chat", slug: "run-llm-2gb-vram", date: "July 24, 2026", readTime: "10 min read" },
+  { title: "Google AI Studio: The Most Overlooked Free AI Tool in 2026", excerpt: "Google gives away Gemini's full model family plus image/video generation and a free API key — all through AI Studio. Here is why it beats the Gemini website.", category: "AI Chat", slug: "google-ai-studio-free-guide", date: "July 21, 2026", readTime: "8 min read" },
   { title: "AI Tool Pricing Compared 2026: What Do You Actually Get for Your Money", excerpt: "Pricing comparison across AI chat, writing, image, video, and coding tools. See what free tiers actually give you.", category: "AI Business", slug: "ai-tool-pricing-comparison-2026", date: "June 6, 2026", readTime: "8 min read" },
   { title: "Apple WWDC 2026 AI Recap: New Siri, iOS 27, macOS Golden Gate", excerpt: "Apple's biggest AI push yet — revamped Siri, system-wide Apple Intelligence on iOS 27, and macOS 27 Golden Gate. Compared against ChatGPT and Gemini.", category: "AI Chat", slug: "apple-wwdc-2026-ai-recap", date: "June 10, 2026", readTime: "10 min read" },
   { title: "Open Source vs Proprietary AI Models in 2026", excerpt: "Llama 4, Mistral, Qwen vs GPT-5, Claude, Gemini. Where open source has caught up and where proprietary still leads.", category: "AI Chat", slug: "open-source-vs-proprietary-ai-2026", date: "June 5, 2026", readTime: "9 min read" },
@@ -37,12 +42,12 @@ const articles = [
 var structuredData = JSON.stringify({
   "@context": "https://schema.org", "@type": "CollectionPage",
   "name": "Blog - AI Tool Reviews and Tutorials",
-  "description": "Honest, in-depth reviews and tutorials for AI tools. 30+ articles. No sponsored content, just real-world testing.",
+  "description": "Honest, in-depth reviews and tutorials for AI tools. 35+ articles. No sponsored content, just real-world testing.",
   "url": "https://genaipick.com/blog/"
 });
 ---
 
-<BaseLayout title="Blog" description="AI tool reviews, tutorials, and comparisons. 30+ in-depth articles with honest testing of the tools that actually matter." structuredData={structuredData}>
+<BaseLayout title="Blog" description="AI tool reviews, tutorials, and comparisons. 35+ in-depth articles with honest testing of the tools that actually matter." structuredData={structuredData}>
   <section class="page-header"><div class="container"><h1>Blog</h1><p>In-depth AI tool reviews and tutorials. No fluff, no sponsored content — just real-world analysis.</p></div></section>
   <section class="articles-section" style="padding-top: 0;"><div class="container"><div class="articles-grid">
     {articles.map(article => (<article class="article-card"><div class="content"><span class="category">{article.category}</span><h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3><p>{article.excerpt}</p><div class="meta"><span>{article.date}</span><span>{article.readTime}</span></div></div></article>))}

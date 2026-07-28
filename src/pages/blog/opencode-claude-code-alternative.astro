@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBanner from '../../components/AffiliateBanner.astro';
+
+var title = "Claude Code Alternatives: OpenCode — The Free Open-Source Replacement That Won't Get You Banned";
+var description = "Anthropic is cracking down on Claude Code accounts. Enter OpenCode: a free, open-source CLI coding agent that works with DeepSeek, Gemini, and other models.";
+
+var articleSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person",
+    "name": "Lao Lu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GenAIPick",
+    "url": "https://genaipick.com"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-30",
+  "url": "https://genaipick.com/blog/opencode-claude-code-alternative/"
+});
+
+var breadcrumbSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://genaipick.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://genaipick.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": title,
+      "item": "https://genaipick.com/blog/opencode-claude-code-alternative/"
+    }
+  ]
+});
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  structuredData={articleSchema}
+>
+  <article class="blog-post">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
+      <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
+      <span>OpenCode Tutorial</span>
+    </nav>
+
+    <h1 class="article-h1">{title}</h1>
+    <div class="blog-meta">
+      <span>By <a href="https://lusdaily.com" target="_blank" rel="noopener" class="author-link">Lao Lu</a></span>
+      <span class="sep">·</span>
+      <span>Also on <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a></span>
+    </div>
+
+    <blockquote class="article-intro">
+      <p>Anthropic started banning accounts using Claude Code through unofficial channels. Mine almost got caught. Here is how I switched to OpenCode — a free, open-source CLI agent that works with almost any model.</p>
+    </blockquote>
+
+    <h2>The Claude Code Ban Wave</h2>
+    <p>In mid-2026, Anthropic quietly tightened their usage policies. Users running Claude Code through unofficial API gateways or reverse-proxy setups started getting account warnings and bans. The message was clear: if you are not paying Anthropic directly, you are not welcome.</p>
+
+    <p>This hit the developer community hard. Claude Code had become the go-to CLI agent for vibe coding — iterating on code by chatting with an AI from your terminal. It was nearly perfect: excellent code generation, smart context handling, and deep integration with your dev environment.</p>
+
+    <p>Then the bans started. Including mine. I got a warning email that made me immediately start looking for alternatives.</p>
+
+    <h2>Enter OpenCode: What Makes It Different</h2>
+
+    <p><strong>OpenCode</strong> is an open-source CLI coding agent from the team at anomalco. It takes the same concept as Claude Code — a terminal-based AI pair programmer — but with two critical differences:</p>
+
+    <ul>
+      <li><strong>Model-agnostic</strong> — works with any LLM provider: DeepSeek, Gemini, OpenAI, Anthropic, Groq, or any OpenAI-compatible API. You choose the model.</li>
+      <li><strong>Open source</strong> — MIT licensed. No account bans, no usage limits, no monthly fees.</li>
+    </ul>
+
+    <p>You can literally run OpenCode with the <strong>free</strong> Google Gemini API and pay zero dollars while getting GPT-4-class coding assistance.</p>
+
+    <figure>
+      <img src="https://lusdaily.com/wp-content/uploads/2026/07/默认标题__2026-07-1822_20_12-compressed.png" alt="OpenCode CLI interface" style="width:100%;max-width:800px;border-radius:8px;" />
+      <figcaption>OpenCode running in the terminal with DeepSeek V4 model</figcaption>
+    </figure>
+
+    <AffiliateBanner variant="compact" />
+
+    <h2>Installation (3 Minutes)</h2>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Python 3.11+</li>
+      <li>A terminal (any terminal works — Windows Terminal, iTerm2, Kitty)</li>
+      <li>An API key from any provider (recommend starting with free Google Gemini)</li>
+    </ul>
+
+    <h3>Install via pip</h3>
+    <pre><code>pip install opencode</code></pre>
+
+    <h3>Set your API key</h3>
+    <p>For Google Gemini (free):</p>
+    <pre><code>export GEMINI_API_KEY="your-key-here"</code></pre>
+
+    <p>Or for DeepSeek:</p>
+    <pre><code>export DEEPSEEK_API_KEY="your-key-here"</code></pre>
+
+    <h3>Launch it</h3>
+    <pre><code>opencode</code></pre>
+
+    <p>That's it. You'll see a terminal interface where you can chat with the AI about your codebase. It auto-indexes your project, understands imports, and can read/write files.</p>
+
+    <h2>Real Usage: What OpenCode Can Actually Do</h2>
+
+    <p>I have been using OpenCode for three weeks now. Here is what impressed me:</p>
+
+    <h3>1. Smart File Navigation</h3>
+    <p>OpenCode scans your project and builds a semantic index. Ask it to "find the authentication middleware" and it navigates directly to the right file, not just grep results.</p>
+
+    <h3>2. Diff-Based Edits</h3>
+    <p>Unlike some coding agents that rewrite entire files, OpenCode uses structured diffs. This means you can review exactly what changed before applying. Every edit shows a clean diff preview.</p>
+
+    <h3>3. Multi-File Refactors</h3>
+    <p>I asked it to refactor my affiliate link management system across three files. It analyzed the imports, understood the dependencies, and rewrote the code correctly on the first try.</p>
+
+    <h3>4. Model Switching On the Fly</h3>
+    <p>Start with DeepSeek for rapid iteration, switch to Gemini 3.6 Flash for complex logic, fall back to OpenAI if needed. One command: <code>/model gemini-3.6-flash</code>.</p>
+
+    <h2>OpenCode vs Claude Code: Honest Comparison</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Claude Code</th>
+          <th>OpenCode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price</td>
+          <td>$20/mo (Pro) or API pricing</td>
+          <td><strong>Free (open source)</strong></td>
+        </tr>
+        <tr>
+          <td>Models Supported</td>
+          <td>Claude only</td>
+          <td><strong>Any model (Gemini, DeepSeek, GPT, Claude)</strong></td>
+        </tr>
+        <tr>
+          <td>Account Risk</td>
+          <td>Bans for unofficial usage</td>
+          <td><strong>None — runs locally</strong></td>
+        </tr>
+        <tr>
+          <td>Code Quality</td>
+          <td>Excellent</td>
+          <td>Very good (depends on underlying model)</td>
+        </tr>
+        <tr>
+          <td>Speed</td>
+          <td>Fast (Sonnet optimized)</td>
+          <td>Fast (depends on API latency)</td>
+        </tr>
+        <tr>
+          <td>Context Handling</td>
+          <td>Excellent</td>
+          <td>Good (getting better each release)</td>
+        </tr>
+        <tr>
+          <td>Customization</td>
+          <td>Limited</td>
+          <td><strong>Fully configurable YAML</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>The Zero-Cost Setup</h2>
+
+    <p>My current setup costs me exactly $0/month:</p>
+    <ol>
+      <li><strong>OpenCode</strong> — free and open source</li>
+      <li><strong>Google Gemini API</strong> — free tier with generous limits (sufficient for personal use)</li>
+      <li><strong>VS Code</strong> — free editor</li>
+    </ol>
+
+    <p>For serious projects, I add DeepSeek API credit. Their pricing is roughly $0.50 per million input tokens — negligible for individual developers.</p>
+
+    <figure>
+      <img src="https://lusdaily.com/wp-content/uploads/2026/07/默认标题__2026-07-1022_20_12.png" alt="VS Code + OpenCode workflow" style="width:100%;max-width:800px;border-radius:8px;" />
+      <figcaption>OpenCode integrated into my VS Code terminal with DeepSeek V4</figcaption>
+    </figure>
+
+    <h2>What Is Still Missing</h2>
+
+    <ul>
+      <li><strong>No Claude Code magic</strong> — Sonnet is genuinely excellent at code. OpenCode with Gemini is good, but there is a quality gap for complex refactors.</li>
+      <li><strong>Young ecosystem</strong> — fewer community extensions, fewer tutorials, less documentation than Claude Code.</li>
+      <li><strong>Not agentic yet</strong> — OpenCode executes commands when you tell it. Claude Code can explore your codebase proactively. The gap is narrowing fast though.</li>
+    </ul>
+
+    <h2>Who Should Switch</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Recommendation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>You got banned from Claude Code</td>
+          <td><strong>Switch to OpenCode immediately</strong></td>
+        </tr>
+        <tr>
+          <td>You want free AI coding</td>
+          <td><strong>OpenCode + Gemini free API</strong></td>
+        </tr>
+        <tr>
+          <td>You want the best code quality regardless of cost</td>
+          <td>Keep Claude Code (Pro plan)</td>
+        </tr>
+        <tr>
+          <td>You want to switch between models</td>
+          <td><strong>OpenCode is your only option</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>FAQ</h2>
+
+    <h3>Does OpenCode work on Windows?</h3>
+    <p>Yes. Install with pip in any terminal — Windows Terminal, Git Bash, or WSL all work.</p>
+
+    <h3>Can I use it with my existing API keys?</h3>
+    <p>Absolutely. OpenCode supports any OpenAI-compatible API. Use your existing DeepSeek, Gemini, Groq, or OpenAI key.</p>
+
+    <h3>Is the code quality the same as Claude Code?</h3>
+    <p>Not quite. Claude Code with Sonnet produces slightly better code. But OpenCode with Gemini 3.6 Flash is close, and the cost difference is dramatic ($0 vs $20/month).</p>
+
+    <h3>Can OpenCode work offline?</h3>
+    <p>Yes, with local models. You can configure it to use Ollama and run a local LLM: <code>/model ollama/codestral</code>.</p>
+
+    <section class="related-articles">
+      <h2>Related Articles</h2>
+      <ul>
+        <li><a href="/blog/github-copilot-vs-cursor-vs-windsurf/">GitHub Copilot vs Cursor vs Windsurf: Best AI Code Editor</a></li>
+        <li><a href="/blog/open-source-vs-proprietary-ai-2026/">Open Source vs Proprietary AI Models</a></li>
+        <li><a href="/blog/vibe-coding-4-hour-app/">Vibe Coding: I Built a Desktop App in 4 Hours</a></li>
+        <li><a href="/blog/google-ai-studio-free-guide/">Google AI Studio Free Guide</a></li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
