@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateBanner from '../components/AffiliateBanner.astro';
 
 const clusters = [
   {
@@ -104,8 +105,8 @@ const latestArticles = [
     date: 'Apr 5, 2026',
     readTime: '10 min read'
   }
+];
 
-import AffiliateBanner from '../components/AffiliateBanner.astro';];
 ---
 
 <BaseLayout
@@ -116,10 +117,12 @@ import AffiliateBanner from '../components/AffiliateBanner.astro';];
     <div class="container">
       <h1>Find the Right AI Tool</h1>
       <p>No fluff. No sponsored reviews. Just honest, hands-on testing of the AI tools that actually matter.</p>
+    </div>
+  </section>
 
-  <AffiliateBanner variant="compact" />
-
-
+  <section class="affiliate-banner-section">
+    <div class="container">
+      <AffiliateBanner variant="compact" />
     </div>
   </section>
   
