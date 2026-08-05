@@ -1,6 +1,6 @@
 ---
-
-import AffiliateBanner from '../components/AffiliateBanner.astro';import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateBanner from '../components/AffiliateBanner.astro';
 ---
 
 <BaseLayout
@@ -14,9 +14,7 @@ import AffiliateBanner from '../components/AffiliateBanner.astro';import BaseLay
         
         <p>Have a question, suggestion, or just want to chat about AI tools? I'd love to hear from you.</p>
 
-  <AffiliateBanner variant="compact" />
-
-
+        <p>GenAIPick is run by one person: <a href="/author/">Lao Lu</a>. No support team, no ticket queue &mdash; you are writing directly to the person who tests and reviews the tools.</p>
         
         <h2>What I Can Help With</h2>
         
@@ -37,9 +35,21 @@ import AffiliateBanner from '../components/AffiliateBanner.astro';import BaseLay
         
         <h2>How to Reach Me</h2>
         
-        <p>Send me an email at: <strong><a href="mailto:hello@genaipick.com">hello@genaipick.com</a></strong></p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:hello@genaipick.com">hello@genaipick.com</a></li>
+          <li><strong>Telegram:</strong> <a href="https://t.me/ulysis6" target="_blank" rel="noopener nofollow">@ulysis6</a> (fastest)</li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener">shenlu-ulysis6</a></li>
+        </ul>
         
-        <p>I try to respond to all legitimate messages, but I get a lot of emails. Give me a few days, and I'll get back to you.</p>
+        <p>I try to respond to all legitimate messages within a few days. If something is time-sensitive, Telegram is your best bet.</p>
+        
+        <h2>Frequently Asked Questions</h2>
+        
+        <p><strong>Do you accept guest posts?</strong> No. My content stays authentic and hands-on.</p>
+        <p><strong>Do you charge for reviews?</strong> No. I pay for my own subscriptions and never accept payment for coverage.</p>
+        <p><strong>Can you help me implement AI in my business?</strong> I don't do consulting, but my <a href="/blog/">tutorials</a> cover the tools step by step.</p>
+        
+        <AffiliateBanner variant="compact" />
         
         <p>Thanks for reaching out!</p>
       </div>

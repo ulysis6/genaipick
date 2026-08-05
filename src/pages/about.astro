@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateBanner from '../components/AffiliateBanner.astro';
 
 const structuredData = JSON.stringify({
   "@context": "https://schema.org",
@@ -7,8 +8,7 @@ const structuredData = JSON.stringify({
   "name": "About GenAIPick",
   "description": "Learn about GenAIPick - honest, hands-on AI tool reviews and tutorials.",
   "url": "https://genaipick.com/about/"
-
-import AffiliateBanner from '../components/AffiliateBanner.astro';});
+});
 ---
 
 <BaseLayout
@@ -20,11 +20,17 @@ import AffiliateBanner from '../components/AffiliateBanner.astro';});
     <div class="container">
       <div class="static-content">
         <h1>About GenAIPick</h1>
+
+        <div style="display:flex;gap:20px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:24px 0;">
+          <img src="/images/author-logo.png" alt="Lao Lu" style="width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0;" />
+          <div>
+            <p style="margin-bottom:8px;"><strong>Written by Lao Lu (Lu Shen)</strong> &mdash; indie developer and small business owner. I started GenAIPick because most AI tool reviews are either sponsored or written by people who never touched the product.</p>
+            <p style="margin-bottom:8px;">I also build <a href="https://toolmixr.com" target="_blank" rel="noopener">ToolMixr</a> (free client-side web tools) and write about building websites and making money online at <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a>.</p>
+            <p><a href="/author/">Read the full author story</a> &middot; <a href="https://www.linkedin.com/in/shenlu-ulysis6/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://github.com/ulysis6" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </div>
         
         <p>Welcome to GenAIPick. I'm a tech enthusiast who's been using AI tools since before they were cool. I've watched the AI space explode over the past few years, and I've tried probably too many of these tools.</p>
-
-  <AffiliateBanner variant="compact" />
-
 
         
         <p>Why did I start this site? Because most AI tool reviews are either:</p>
@@ -62,9 +68,17 @@ import AffiliateBanner from '../components/AffiliateBanner.astro';});
         
         <p>GenAIPick comes from "GenAI Pick" - as in, your go-to source for picking the right Generative AI tools. Simple enough.</p>
         
+        <h2>Frequently Asked Questions</h2>
+
+        <p><strong>Are reviews sponsored?</strong> No. I pay for my own subscriptions and never accept payment for coverage. Some articles include affiliate links to services I recommend &mdash; they cost you nothing and help keep this site running.</p>
+        <p><strong>How do you test tools?</strong> Every tool gets at least two weeks of real usage, head-to-head comparisons, and long-term follow-up before I publish a review.</p>
+        <p><strong>Can I submit a tool for review?</strong> Yes &mdash; via the <a href="/contact/">contact page</a>. I review tools I genuinely use, so submission does not guarantee coverage.</p>
+
+        <AffiliateBanner variant="compact" />
+        
         <h2>Get in Touch</h2>
         
-        <p>Have a tool you want me to review? Found something outdated? Just want to say hi? <a href="/contact/">Drop me a message</a>.</p>
+        <p>Have a tool you want me to review? Found something outdated? Just want to say hi? <a href="/contact/">Drop me a message</a> &mdash; or reach me directly on <a href="https://t.me/ulysis6" target="_blank" rel="noopener nofollow">Telegram: @ulysis6</a>.</p>
         
         <p>Thanks for being here.</p>
       </div>
