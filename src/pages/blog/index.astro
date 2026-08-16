@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = [
   { title: "DeepSeek V4 Pro: Why the Price Just Jumped 14x (And What It Means for AI Costs)", excerpt: "DeepSeek's new V4 Pro flagship costs up to 14x more than V4 Flash, with output tokens at $0.87 per million. Here's what changed and whether it's still worth it.", category: "AI Chat", slug: "deepseek-v4-pro-pricing-analysis", date: "August 16, 2026", readTime: "8 min read" },
+  { title: "I Burned 70 Million Tokens Vibe Coding a Tool That Lets Me Monitor My AI Agents From My Phone", excerpt: "My PC runs AI agents 24/7. I built a no-server tool with pure vibe coding that lets me check their status, logs, API balance, and even chat with them — from my phone, anywhere.", category: "AI Business", slug: "agent-sentinel-monitor-ai-agents", date: "August 15, 2026", readTime: "9 min read" },
   { title: "Gemini 3.7 Flash: Google Ships a Coding-First Model That Beats Sonnet 5 and GPT-5.6", excerpt: "Three weeks after its last release, Google dropped Gemini 3.7 Flash — a model that wins coding benchmarks and costs 50% less than its predecessor.", category: "AI Chat", slug: "gemini-3-7-flash-review", date: "August 14, 2026", readTime: "7 min read" },
   { title: "Meta Muse Glimmer: The 30B Open-Source Model That Runs Agentic AI on Your Laptop", excerpt: "Meta just open-sourced Muse Glimmer, a 30B-parameter Apache 2.0 model built for local agentic workflows. Here's what it is and why it matters.", category: "AI Chat", slug: "meta-muse-glimmer-30b-open-source", date: "August 12, 2026", readTime: "8 min read" },
   { title: "Vibe Coding: I Built a Desktop App in 4 Hours Using AI (And Zero Frontend Skills)", excerpt: "I sat down with VS Code, Claude Code, and DeepSeek V4 and built a real desktop floating widget in 4 hours. Here is exactly how vibe coding works and what you can build.", category: "AI Business", slug: "vibe-coding-4-hour-app", date: "July 31, 2026", readTime: "9 min read" },
@@ -45,12 +46,12 @@ const articles = [
 var structuredData = JSON.stringify({
   "@context": "https://schema.org", "@type": "CollectionPage",
   "name": "Blog - AI Tool Reviews and Tutorials",
-  "description": "Honest, in-depth reviews and tutorials for AI tools. 38+ articles. No sponsored content, just real-world testing.",
+  "description": "Honest, in-depth reviews and tutorials for AI tools. 39+ articles. No sponsored content, just real-world testing.",
   "url": "https://genaipick.com/blog/"
 });
 ---
 
-<BaseLayout title="Blog" description="AI tool reviews, tutorials, and comparisons. 38+ in-depth articles with honest testing of the tools that actually matter." structuredData={structuredData}>
+<BaseLayout title="Blog" description="AI tool reviews, tutorials, and comparisons. 39+ in-depth articles with honest testing of the tools that actually matter." structuredData={structuredData}>
   <section class="page-header"><div class="container"><h1>Blog</h1><p>In-depth AI tool reviews and tutorials. No fluff, no sponsored content — just real-world analysis.</p></div></section>
   <section class="articles-section" style="padding-top: 0;"><div class="container"><div class="articles-grid">
     {articles.map(article => (<article class="article-card"><div class="content"><span class="category">{article.category}</span><h3><a href={`/blog/${article.slug}/`}>{article.title}</a></h3><p>{article.excerpt}</p><div class="meta"><span>{article.date}</span><span>{article.readTime}</span></div></div></article>))}
