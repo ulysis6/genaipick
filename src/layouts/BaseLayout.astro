@@ -748,6 +748,23 @@ const websiteSchema = JSON.stringify({
         color: var(--text-secondary);
         font-size: 12px;
       }
+
+      /* Sponsored Banner (all pages) */
+      .prcn-banner-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 20px 0;
+        text-align: center;
+      }
+      .prcn-banner {
+        max-width: 728px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: inline-block;
+        transition: opacity 0.2s;
+      }
+      .prcn-banner:hover { opacity: 0.92; }
       
       /* Utilities */
       .text-center { text-align: center; }
@@ -890,6 +907,14 @@ const websiteSchema = JSON.stringify({
       <a href="/ai-business-tools/">AI Business</a>
       <a href="/blog/">Blog</a>
     </div>
+    
+    <!-- Sponsored Banner (all pages) -->
+    <div class="prcn-banner-wrap">
+      <a href="https://www.profitableratecpmnetwork.com/itrnjnfyg5?key=c0c367f1da85ebff5b72faf76d26e576" target="_blank" rel="sponsored noopener" aria-label="Sponsored banner">
+        <img src="/images/prcn-banner.png" alt="Best AI Tools of 2026 — Honest reviews. Real benchmarks." width="728" height="90" class="prcn-banner" loading="lazy" />
+      </a>
+    </div>
+    <!-- /Sponsored Banner -->
     
     <main>
       <slot />
