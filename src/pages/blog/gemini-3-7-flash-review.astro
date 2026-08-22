@@ -28,12 +28,13 @@ var breadcrumbSchema = JSON.stringify({
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema}>
-  <article class="blog-post">
-    <nav class="breadcrumb">
+  <div class="article-page">
+    <div class="container">
+    <div class="breadcrumb">
       <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
       <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
       <span>Gemini 3.7 Flash</span>
-    </nav>
+    </div>
 
     <h1 class="article-h1">{title}</h1>
     <div class="blog-meta">
@@ -42,6 +43,8 @@ var breadcrumbSchema = JSON.stringify({
       <span>Also on <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a></span>
     </div>
 
+
+    <article class="article-content">
     <p>On August 13, Google released <strong>Gemini 3.7 Flash</strong> — just three weeks after Gemini 3.6 Flash. The release cadence alone is newsworthy, but the real story is in the numbers: it reportedly beats Anthropic's Sonnet 5 and OpenAI's GPT-5.6 on coding evaluations, while costing <strong>50% less</strong> than the model it replaced.</p>
 
     <p>I've been using Gemini's Flash line for a while — I reviewed <a href="/blog/gemini-3-5-flash-review/">Gemini 3.5 Flash</a> back in May — and the trajectory here is hard to ignore. Here's what 3.7 Flash actually changes.</p>
@@ -128,4 +131,6 @@ var breadcrumbSchema = JSON.stringify({
     <div id="container-3dae80e22fe1e1f87217dd16d7e807fd"></div>
 
   </article>
+    </div>
+  </div>
 </BaseLayout>

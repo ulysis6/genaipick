@@ -32,13 +32,16 @@ var breadcrumbSchema = JSON.stringify({
   description={description}
   structuredData={articleSchema}
 >
-  <article class="blog-post">
-    <nav class="breadcrumb">
+  <div class="article-page">
+    <div class="container">
+    <div class="breadcrumb">
       <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
       <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
       <span>Vibe Coding</span>
-    </nav>
+    </div>
 
+
+    <article class="article-content">
     <h1 class="article-h1">{title}</h1>
     <div class="blog-meta">
       <span>By <a href="https://lusdaily.com" target="_blank" rel="noopener" class="author-link">Lao Lu</a></span>
@@ -199,4 +202,6 @@ var breadcrumbSchema = JSON.stringify({
     <div id="container-3dae80e22fe1e1f87217dd16d7e807fd"></div>
 
   </article>
+    </div>
+  </div>
 </BaseLayout>

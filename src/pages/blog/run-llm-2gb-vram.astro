@@ -28,12 +28,13 @@ var breadcrumbSchema = JSON.stringify({
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema}>
-  <article class="blog-post">
-    <nav class="breadcrumb">
+  <div class="article-page">
+    <div class="container">
+    <div class="breadcrumb">
       <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
       <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
       <span>Run LLM on 2GB VRAM</span>
-    </nav>
+    </div>
 
     <h1 class="article-h1">{title}</h1>
     <div class="blog-meta">
@@ -42,6 +43,8 @@ var breadcrumbSchema = JSON.stringify({
       <span>Also on <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a></span>
     </div>
 
+
+    <article class="article-content">
     <p>When people hear "run a large language model locally," the first thing they picture is a $2,000 NVIDIA RTX 4090. Ask on Reddit or Twitter whether you can run an LLM on your laptop, and someone will invariably reply: <em>"Not worth it unless you have at least 8 GB of VRAM."</em></p>
 
     <p>That advice was reasonable in 2023. It's dead wrong in 2026.</p>
@@ -287,4 +290,6 @@ var breadcrumbSchema = JSON.stringify({
     <div id="container-3dae80e22fe1e1f87217dd16d7e807fd"></div>
 
   </article>
+    </div>
+  </div>
 </BaseLayout>

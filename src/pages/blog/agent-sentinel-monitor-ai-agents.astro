@@ -28,12 +28,13 @@ var breadcrumbSchema = JSON.stringify({
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema}>
-  <article class="blog-post">
-    <nav class="breadcrumb">
+  <div class="article-page">
+    <div class="container">
+    <div class="breadcrumb">
       <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
       <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
       <span>Agent Sentinel</span>
-    </nav>
+    </div>
 
     <h1 class="article-h1">{title}</h1>
     <div class="blog-meta">
@@ -42,6 +43,8 @@ var breadcrumbSchema = JSON.stringify({
       <span>Also on <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a></span>
     </div>
 
+
+    <article class="article-content">
     <p>My computer runs AI agents 24/7 — Hermes, Claude, and Codex all working on different jobs. When I'm away from the keyboard, I always wonder: <strong>Did it finish? Is it stuck? Do I have enough API balance?</strong> So I built a tool that lets me check what my AI agents are doing — and even talk to them — right from my phone. Grocery shopping, on the subway, lying in bed: one tap and I can see everything.</p>
 
     <p>This time was different: I went full vibe coding. I never even opened VS Code. The whole thing cost <strong>about 70 million tokens</strong> — roughly $4, the price of a takeout meal.</p>
@@ -196,4 +199,6 @@ var breadcrumbSchema = JSON.stringify({
     <div id="container-3dae80e22fe1e1f87217dd16d7e807fd"></div>
 
   </article>
+    </div>
+  </div>
 </BaseLayout>

@@ -28,12 +28,13 @@ var breadcrumbSchema = JSON.stringify({
 ---
 
 <BaseLayout title={title} description={description} structuredData={articleSchema}>
-  <article class="blog-post">
-    <nav class="breadcrumb">
+  <div class="article-page">
+    <div class="container">
+    <div class="breadcrumb">
       <a href="/">Home</a> <span class="breadcrumb-sep">/</span>
       <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
       <span>DeepSeek V4 Pro</span>
-    </nav>
+    </div>
 
     <h1 class="article-h1">{title}</h1>
     <div class="blog-meta">
@@ -42,6 +43,8 @@ var breadcrumbSchema = JSON.stringify({
       <span>Also on <a href="https://lusdaily.com" target="_blank" rel="noopener">lusdaily.com</a></span>
     </div>
 
+
+    <article class="article-content">
     <p>On August 14, DeepSeek launched its new flagship, <strong>V4 Pro</strong> — and the AI world did a double take at the price tag. The model costs <strong>up to 14 times more</strong> than its own V4 Flash sibling, with output tokens priced at <strong>$0.87 per million</strong>. For a lab that built its reputation on dramatically undercutting everyone else, that's a sharp turn.</p>
 
     <p>This isn't just a pricing note — it's a signal about where AI economics are heading. Here's my read on what actually happened and what it means if you're paying for AI inference.</p>
@@ -127,4 +130,6 @@ var breadcrumbSchema = JSON.stringify({
     <div id="container-3dae80e22fe1e1f87217dd16d7e807fd"></div>
 
   </article>
+    </div>
+  </div>
 </BaseLayout>
